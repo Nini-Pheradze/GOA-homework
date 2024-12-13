@@ -1,0 +1,67 @@
+<html>
+    
+    
+        <head>
+        
+        <title>News/Media Site</title>
+    </head>
+
+
+    <body>
+        
+        <!-- Introduction -->
+
+        <h1>World News</h1>
+        
+        <pre>
+        Welcome
+        Welcome
+        welcome
+        welcome
+        </pre>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Vero hic, vitae, vel delectus consequuntur ducimus maxime repudiandae totam officiis alias possimus commodi fuga iste modi aliquid. Provident maiores excepturi doloremque!</p>
+
+        <button>Click for more</button>
+        
+        <!-- American News -->
+
+        <hr>American News
+        
+        <h2>American News</h2>
+
+        <p>American News <hr>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti sed quasi explicabo earum quos iure fuga porro doloremque accusantium. <br> Earum obcaecati asperiores corporis ad repudiandae! Repellendus vel nostrum tempora illo.</p>
+        
+        <!-- European News -->
+        
+        <button>More</button>
+        
+        <hr>Europe News
+
+        <h3>Europe News</h3>
+        
+        <p>Europe News<hr>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque facilis illum ad saepe!<br> Fugit consequuntur voluptates, cupiditate eum harum nam id, recusandae sapiente iure inventore, repellat numquam ullam distinctio quas libero placeat repudiandae quibusdam quos!</p>
+
+        <!-- Asian News -->
+        
+        <button>Click me for more</button>
+
+        <hr> Asian News
+
+        <h4>Asian News</h4>
+
+        <p>Asian News<hr>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Quisquam quod omnis dolore quaerat quas enim, minima aperiam esse provident placeat iusto sit accusantium odit explicabo nesciunt voluptates ex nobis id ut, velit magni non?<br>Deserunt facilis cum minus ex corporis illum velit aliquam voluptas placeat.</p>
+
+        <!-- African News -->
+
+        <button>Get More</button>
+
+        <hr>African News
+
+        <h5>African News</h5>
+
+        <p>African News<hr>  Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br> Modi vitae hic temporibus est nam incidunt rem tempora omnis voluptatibus non, dicta odit! Eos tenetur, odio nulla expedita at accusamus neque aliquid dolorum quis fuga quae possimus, aspernatur incidunt.<br> Cum doloribus officiis facere quibusdam tenetur, neque nobis architecto fugiat, error consequatur, temporibus laudantium provident voluptatem eius!</p>
+
+        </body>
+
+        </html>

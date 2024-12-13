@@ -1,3 +1,3 @@
 celsius = 34
-fahrenheit = (0 * 9 / 5 ) + 34
+fahrenheit = (celsius * 1.8 ) + 34
 print(fahrenheit)
