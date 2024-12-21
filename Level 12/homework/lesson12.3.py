@@ -1,0 +1,11 @@
+# ლოგიკური ოპერაციები 2 და 3 ბრძანებით
+print(5 > 3 and 5 < 3 and 8 > 4)
+print(8 > 3 and 8 < 3 or 8 > 5)
+print(3 > 2 or 30 > 150 and 150 > 170)
+print(4 > 5 and 5 < 4 or 40 > 50)
+print(60 > 70 or 60 >= 60 and 77 > 71)
+print(80 <= 81 or 87 > 85 or 40 > 35)
+print(85 > 57 and 57 < 37 or 34 > 33)
+print(87 != 18 or 14 != 12 and 17 != 18)
+print(435 >= 38 and 87 > 34 and 45 != 60)
+print(800 > 60 or 500 > 50 and 700 < 900)
