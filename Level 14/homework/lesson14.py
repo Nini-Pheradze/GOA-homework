@@ -34,10 +34,12 @@ num1, num2, num3, num4, num5 = int(input("Enter number1: ")), int(input("Enter n
 for c in range(5):
     print(num1, num2, num3, num4, num5)
 
-#მომხმარებლის სახელი
+#მომხმარებლის სახელი - Nini
 user = input("Enter your name: ")
-for r in range(10):
-    print()
+for r in user :
+    print(r)
+
+
 
 # მომხმარებლის რიცხვები:
 num1, num2, num3 =int(input("Enter number1: ")), int(input("Enter number2: ")), int(input("Enter number3: "))

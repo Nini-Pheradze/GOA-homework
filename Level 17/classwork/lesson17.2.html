@@ -1,0 +1,31 @@
+<!--ვებსაიტზე დაამატეთ ვიდეო და კოდის წერისას გამოიყენეთ 2 source თეგი. ვიდეოს ასევე გაუწერეთ controls ატრიბუტი.იუთუბზე აირჩიეთ ნებისმიერი ვიდეო და iframe-ს გამოყენებით ჩანერგეთ ის ვებსაიტზე.შექმენით ჩამოსაშლელი მენიუ და მასში დაამატეთ 5 ვარიანტი (option). ეს მენიუ დააკავშირეთ label-თან  -->
+    <html>
+        <head><title>About Cars</title></head>
+
+        <body>
+            <form>
+        <label for="select">Select Car</label>
+        <select name="Cars" id="select">
+            <option value="Mercedes">Mercedes</option>
+            <option value="BMW">BMW</option>
+            <option value="Audi">Audi</option>
+            <option value="Porsche">Porsche</option>
+            <option value="Jaguar">Jaguar</option>
+            <option value="Bugatti">Bugatti</option>
+            <option value="Lamborghini">Lamborghini</option>
+            <option value="Ferrari">Ferrari</option>
+            <option value="MCLAREN ">MCLAREN </option>
+            <option value="Tuatara">Tuatara</option>
+        </select>
+
+            <video controls>
+                <source src="countdown.mp4" type="video/mp4">
+                <source src="countdown2.mkv" type="video/mkv" width="800">
+                Video is not supported
+            </video>
+
+            
+                <iframe width="1000" height="700" src="https://www.youtube.com/embed/G0CXFJsoxdE" title="2024 Mercedes-Maybach S580 Night Series 503Hp Wild Luxury Sedan&#39; By Rocars | #mercedes #s580" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </form>
+        </body>
+    </html>
