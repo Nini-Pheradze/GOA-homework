@@ -1,0 +1,55 @@
+<!-- შექმენით მარტივი html საიტი სადაც გექნებათ 3 ნავიგაციის ლინკი, ასევე დაამატეთ ლინკი რომელიც გადაგვიყვანს თქვენი facebook-ის პროფილზე, დაამატეთ ღილაკები რომელიც alert-ით გამოგვიტანს ნებისმიერ ტექსტს და ბოლოს შექმენით 2 შესატანი ველი სადაც მომხმარებელს შეეძლება სახელის და ტელეფონის ნომრის შეყვანა. -->
+
+<html>
+    <head><title>
+        Website
+    </title></head>
+
+    <body>
+        <header>
+            <nav>
+                <a href="#h1">About Us</a>
+                <br><br>
+                <a href="#h2">Main Information</a>
+                <br><br>
+                <a href="#h3">Contact Us</a>
+                <br><br>
+                <a href="#h4">Facebook</a>
+            </nav>
+
+            <iframe src="https://www.facebook.com/profile.php?id=100074212092678&mibextid=kFxxJD/" frameborder="0"></iframe>
+
+            <h1 id="h1"><b>About Us</b></h1>
+            <h2 id="h2"><b>Main Information</b></h2>
+            <h2 id="h3"><b>Contact Us</b></h2>
+
+            <br>
+
+        <div>
+            <button onclick="alert('Registration And Information')">Registration And Information</button>
+
+            <br><br>
+
+            <button onclick="alert('information')">Information</button>
+        </div>
+
+            <br>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio perspiciatis adipisci vero quisquam, accusantium molestias? Neque ducimus consectetur possimus dignissimos, quibusdam beatae quae nobis placeat provident. Id sint excepturi fugit eligendi quis, impedit dolor distinctio totam magni, doloremque sunt fuga obcaecati atque beatae natus corporis.</p>
+
+            <br>
+
+            <button onclick="alert('Registration')">Here you can join</button>
+
+            <br><br>
+
+            <label for="Fullname">Fullname</label>
+            <input type="text" required id="Fullname">
+
+            <br><br>
+
+            <label for="tel">Tel : </label>
+            <input type="tel" required id="tel">
+        </header>
+    </body>
+</html>
