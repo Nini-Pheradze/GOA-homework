@@ -15,4 +15,3 @@ print(False and False) #False
 user1 = int(input("Enter your age: "))
 user2 = int(input("Enter your favourite number: "))
 print(user1 > 30 and user2 < 40 )
-

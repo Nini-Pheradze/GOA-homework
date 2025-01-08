@@ -1,0 +1,15 @@
+div p{
+    color:bisque; background-color: black ; text-align: right; font-size: small; font-weight: 400; border: solid
+}
+
+div h1{
+    color: green; background-color: wheat ; text-align: right; font-size: large; font-weight: 200; border: solid;
+}
+
+div h2{
+    color: aqua; background-color: wheat ; text-align: center; font-size: medium; font-weight: 600; border: solid;
+}
+
+h1 b{
+    color: red;
+}

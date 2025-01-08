@@ -7,4 +7,4 @@ for y in range(2, num):
 
 if is_valid == True:
     print("number is prime")
-else: print("nember is not prime")
+else: print("number is not prime")
