@@ -1,0 +1,20 @@
+<!-- id ატრიბუტს ვიყენებთ, მაშინ როცა გვინდა, მხოლოდ ერთი, კონკრეტული ელემენტის გასტილვა; class-ს ვიყენებთ, მაშინ როცა რამდენიმე ელენტის ერთად და ერთნაირად გასტილვა, აგრეთვე id ატრიბუტი class ატრიბუტთან შედარებით უფრო პრიორიტეტულია. -->
+
+<!-- პრიორიტეტული სია ცნობილია როგორც specificity-სპეციფიკა. specificity არის ალგორითმი, რომელსაც იყენებს ბრაუზერი ელემენტის მისაკვლევად.
+პრიორიტეტულად  გასტილვის წესები შემდეგნაირად ეწყობა: inline style, IDS, classes, Elementes. -->
+
+<!-- rgb ფუნქციას ვიყენებთ, მაშინ, როცა გვსურს ფერის შევქმნათ ჩვენით. rgb(I, II, III) თითოეული გაწერილია დიაპაზონში 0-255; თითოეული რიცხვი არის წითელი, ლურჯი ან მწვანე ინტენსივობის. რიცხვი, რაც უფრო დაბალია, ინტენსივობა მით უფრო მაღალია. -->
+
+<html>
+    <head><title>site</title>
+        <link rel="stylesheet" href="lesson29.1.css">
+    </head>
+
+    <body>
+        <p id="p1">Lorem ipsum dolor sit amet.</p>
+        <p id="p2">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+        <p id="p3">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        <p id="p4">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p id="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </body>
+</html>
