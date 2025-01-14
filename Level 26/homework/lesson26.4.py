@@ -5,7 +5,6 @@ def find_maximum(number):
     for num in number:
         if num > max_value:
             max_value = num
-    list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
     print(max_value)
 
