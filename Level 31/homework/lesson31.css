@@ -1,0 +1,106 @@
+#p01{
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255)
+}
+
+#p02{
+    background-color: rgb(0, 0, 255);
+    color: rgb(0, 0, 0);
+}
+
+#p03{
+    background-color: rgb(0, 255, 0);
+    color: rgb(195, 208, 19);
+}
+
+#p04{
+    background-color: rgb(0, 0, 255);
+    color: rgb(175, 175, 200);
+}
+
+#p05{
+    background-color: rgb(205, 87, 32);
+    color: rgb(124, 205, 32);
+}
+
+#p06{
+    background-color: #ffffff;
+    color: #aaddcc;
+}
+
+#p07{
+    background-color: #bb0011;
+    color: #334455;
+}
+
+#p08{
+    background-color: #112222;
+    color: #223455;
+}
+
+#p09{
+    background-color: #447788;
+    color: #559921;
+}
+
+#p10{
+    background-color: #213141;
+    color: #aaddcc;
+}
+
+#div1{
+    width: 1000px;
+    height: 1000px;
+    background-color: #4f901c;
+}
+
+#div2{
+    width: 20%;
+    height: 15%;
+    background-color: #000000;
+}
+
+.heightandwidth{
+    height: 150px;
+    width: 120px;
+}
+
+#div01{
+    background-color: #90431c;
+}
+
+#div02{
+    background-color: #1c2090;
+}
+
+#div03{
+    background-color: #90201c;
+}
+
+#div04{
+    background-color: #8e901c;
+}
+
+#div05{
+    background-color: #901c84;
+}
+
+#div06{
+    background-color: #1c8e90;
+}
+
+#div07{
+    background-color: #903b1c;
+}
+
+#div08{
+    background-color: #7d1c90;
+}
+
+#div09{
+    background-color: #901c54;
+}
+
+#div10{
+    background-color: #1c9062;
+}

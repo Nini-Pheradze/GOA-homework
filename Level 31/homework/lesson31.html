@@ -1,0 +1,46 @@
+<!-- თქვენი სიტყვებით ახსენით რა არის ვებსაიტის რესპონსიული დიზაინი და ჩამოწერეთ ისეთი გზები, რომლებითაც შეგვიძლია დიზაინი გავხადოთ რესპონსიული -->
+
+<!-- რესპონსიული ვებ საიტი არის ისეთი ვებსაიტი, რომელიც ერგება ნებისმიერი სახის მოწყობილობას. რესპონსიული დიზაინის შექმნისთვის გამოვიყენებთ width-ს და height-ს. -->
+
+<html>
+    <!-- html-ის დოკუმენტში დაამატეთ 10 პარაგრაფი, თითოეულს გაუწერეთ განსხვავებული ტექსტის და ფონის ფერი. პირველ ხუთ პარაგრაფზე გამოიყენეთ rgb color model, დანარჩენ ხუთზე კი hex color model -->
+
+    <head>
+        <title>Site</title>
+        <link rel="stylesheet" href="lesson31.css">
+    </head>
+
+    <body>
+        <p id="p01" class="paragraph1">Lorem ipsum dolor sit amet.</p>
+        <p id="p02" class="paragraph1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, laboriosam!</p>
+        <p id="p03" class="paragraph1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis porro voluptatem labore, fugiat repudiandae laboriosam eum, voluptatum possimus cupiditate, dolore ex facilis et doloribus ad? Delectus architecto eos ea asperiores.</p>
+        <p id="p04" class="paragraph1">Lorem, ipsum dolor.</p>
+        <p id="p05" class="paragraph1">Lorem ipsum dolor sit amet.</p>
+        <p id="p06" class="paragraph2">Lorem ipsum dolor sit.</p>
+        <p id="p07" class="paragraph2">Lorem, ipsum.</p>
+        <p id="p08" class="paragraph2">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+        <p id="p09" class="paragraph2">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+        <p id="p10" class="paragraph2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <!-- ვებსაიტზე დაამატეთ დივ ბლოკი, რომლის სიგანე და სიმაღლე იქნება ტოლი - 1000 პიქსელი და მისი ფონის ფერი იქნება მწვანე. ამ დივ ბლოკში ჩააშენეთ შვილობილი დივ ბლოკი, რომლის სიგანე იქნება მშობელი დივ ბლოკის სიგანის 20% და სიმაღლის 15%. ამ შვილობილი დივ ბლოკის ფონის ფერი უნდა იყოს შავი. ფერის გაწერისას, ორივე შემთხვევაში გამოიყენეთ hex color model -->
+
+        <div id="div1">
+            <div id="div2">
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+
+    <!--  ვებსაიტზე დაამატეთ 10 დივ ბლოკი. თითოეულის სიმაღლე და სიგანე უნდა აღემატებოდეს 100 პიქსელს და ყველას უნდა ქონდეს განსხვავებული ფონის ფერი -->
+
+        <div class="heightandwidth" id="div01"><p>Lorem, ipsum.</p></div>
+        <div class="heightandwidth" id="div02"><p>Lorem ipsum dolor sit.</p></div>
+        <div class="heightandwidth" id="div03"><p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p></div>
+        <div class="heightandwidth" id="div04"><p>Lorem, ipsum dolor.</p></div>
+        <div class="heightandwidth" id="div05"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></div>
+        <div class="heightandwidth" id="div06"><p>Lorem ipsum dolor sit.</p></div>
+        <div class="heightandwidth" id="div07"><p>Lorem ipsum dolor sit amet.</p></div>
+        <div class="heightandwidth" id="div08"><p>Lorem ipsum dolor sit amet.</p></div>
+        <div class="heightandwidth" id="div09"><p>Lorem ipsum dolor sit.</p></div>
+        <div class="heightandwidth" id="div10"><p>Lorem ipsum dolor sit amet.</p></div>
+    </body>
+</html>

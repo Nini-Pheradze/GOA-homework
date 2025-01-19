@@ -6,7 +6,8 @@ print(user_sentence.capitalize())
 
 # Given a list of lowercase strings, capitalize the first letter of each string.???
 lowercase= ["life", "mother", "father", "sisters", "love"]
-print(lowercase.capitalize())
+for i in lowercase: print(i.capitalize()) 
+print(i)
 
 # Create a function that takes a string and returns it with the first letter capitalized.
 

@@ -2,13 +2,21 @@
 
 # Count the number of times the word "the" appears in a given paragraph.
 
-paragraph = "the" "the"
-print(paragraph.count("the"))
+#paragraph = "the" "the"
+#print(paragraph.count("the"))
 
 # Ask the user to input a character and count its occurrences in a given string.
 
-user = input("Enter any kind of characters: ")
-print(.count(user, 0))
+string = input("Enter a string: ")
+
+
+char = input("Enter a character to count: ")
+
+
+count = string.count(char)
+
+
+print(f"The character '{char}' appears {count} times in the string.")
 
 
 # Create a function that counts and returns the occurrences of a specified word in a text.
