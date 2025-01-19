@@ -1,0 +1,14 @@
+#but1{
+    background-color: #000000;
+    color: #ffffff
+}
+
+#but2{
+    background-color: #00aaff;
+    color: #ffffff
+}
+
+#but3{
+    background-color: #aabbdd;
+    color: #ffffff
+}
