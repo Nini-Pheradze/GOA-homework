@@ -1,0 +1,53 @@
+#h1{
+    text-align: right;
+    text-decoration: underline dotted #079526;
+}
+
+#p1{
+    text-align: center;
+    text-decoration: line-through;
+}
+
+#p2{
+    text-align: left;
+    color: #950707;
+}
+
+#p3{
+    text-decoration: overline double #950707;
+}
+
+#p4{
+    text-align: center;
+    text-decoration: line-through dotted #079513;
+}
+
+#p5{
+    text-align: right;
+    text-decoration: overline dashed #079526;
+}
+
+#p6{
+    text-decoration: line-through
+}
+
+#p7{
+    text-decoration: overline;
+}
+
+#p8{
+    text-align: right;
+    color: #079526;
+    text-decoration: overline #079513;
+}
+
+#p9{
+    text-transform: uppercase;
+    color: #707571;
+    text-decoration: overline #707571;
+}
+
+#p10{
+    text-align: right;
+    text-decoration: underline dashed #079513;
+}
