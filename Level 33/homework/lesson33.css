@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+#body{
+    font-family: "Farro";
+}
+
+
 #div1{
     text-decoration: underline dotted #000000e1;
 }
@@ -30,8 +41,23 @@ h1{
     text-transform: uppercase;
 }
 
-#headings{
+#headings0{
     text-shadow: 4px 2px hsla(49, 55%, 51%, 0.882);
-    text-decoration: hsla(68, 93%, 53%, 0.882);
+    font-family: "Farro";
 }
 
+#headings1{
+    text-shadow: 5px 5px hsla(247, 90%, 8%, 0.882);
+}
+
+#par{
+    text-shadow: 2px 0px hsla(0, 7%, 72%, 0.882);
+}
+
+.par1{
+    text-shadow: 4px 2px #8a1717e1;
+}
+
+#roboto_par{
+    font-family: "Roboto";
+}
