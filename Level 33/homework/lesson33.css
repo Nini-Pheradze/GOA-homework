@@ -31,6 +31,7 @@ h1{
 }
 
 #headings{
-    text-shadow: 10px 8px;
+    text-shadow: 4px 2px hsla(49, 55%, 51%, 0.882);
     text-decoration: hsla(68, 93%, 53%, 0.882);
 }
+
