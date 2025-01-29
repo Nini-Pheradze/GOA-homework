@@ -12,5 +12,3 @@ user_name = input("Enter your name: ")
 age = int(input("Enter your age: "))
 
 user_name_and_age(user_name, age)
-
-#done

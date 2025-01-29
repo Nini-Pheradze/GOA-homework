@@ -7,5 +7,3 @@ def list_items(list, item):
     print(list)
 
 list_items([12, 14, 16, 18], 20)
-
-#done

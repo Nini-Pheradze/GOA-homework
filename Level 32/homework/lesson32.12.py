@@ -1,8 +1,12 @@
 # Create a function that inserts an item at the beginning of a list.
 
-def insert_at_beginning(list, item):
-    list.insert(0, item)
+def insert_at_beginning(list):
+    new = list.insert(index, item)
 
-my_list = [2, 3, 4]
-insert_at_beginning(my_list, 1)
-print(my_list) 
+    for new in list:
+        print(new)
+
+list = [1, 2, 3, 4, 5]
+item = 3
+index = 0
+insert_at_beginning([1, 2, 3, 4, 5])

@@ -1,9 +1,11 @@
 # Create a function that inserts an item at the end of a list using the insert method.
-def inserts_at_the_end(my_list, item):
-    my_list.insert(0, item)
+def inserts_at_the_end(list):
+    new = list.insert(index, item)
 
-    my_list = [2, 4, 6]
-    print(my_list.insert(item))
+    for new in list:
+        print(new)
 
-inserts_at_the_end([2, 4, 6], 8)
-print(2, 4, 6)
+list = [1, 2, 3, 4, 5]
+item = 5
+index = 5
+inserts_at_the_end([1, 2, 3, 4, 5])

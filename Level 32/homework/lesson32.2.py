@@ -5,4 +5,3 @@ def first_name_and_last_name(first1_name, last1_name):
 first_name = "nini"
 last_name = "pheradze"
 first_name_and_last_name(last_name.capitalize(), first_name.capitalize())
-#done

@@ -6,5 +6,3 @@ def takes_a_string(fullname):
     print("My fullname is {}".format(fullname[:: -1]))
 
 takes_a_string(['Nini', 'Pheradze'])
-
-#done

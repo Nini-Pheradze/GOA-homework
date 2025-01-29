@@ -1,0 +1,36 @@
+#div1{
+    text-decoration: underline dotted #000000e1;
+}
+
+#div2{
+    text-decoration: none;
+}
+
+h1{
+    text-decoration: overline;
+}
+
+#span1{
+    text-decoration: line-through;
+}
+
+#span2{
+    text-decoration: underline overline;
+}
+
+.underlined{
+    text-decoration: dashed underline;
+}
+
+.warning{
+    text-decoration: wavy;
+}
+
+#nav1{
+    text-transform: uppercase;
+}
+
+#headings{
+    text-shadow: 10px 8px;
+    text-decoration: hsla(68, 93%, 53%, 0.882);
+}

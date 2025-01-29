@@ -6,4 +6,3 @@ def take_sentence(sentence):
     print(words)
 
 take_sentence("I love programming")
-#done
