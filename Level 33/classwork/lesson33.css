@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rye&display=swap');
+
+@font-face{
+    font-family: "FliegeMono";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('FliegeMono-ExtraBold.otf') format('opentype')
+}
+#body {
+    font-family: "Farro";
+    font-family: "FliegeMono";
+}
+
 #h1{
     text-align: right;
     text-decoration: underline dotted #079526;

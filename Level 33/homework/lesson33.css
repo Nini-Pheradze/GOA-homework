@@ -4,6 +4,24 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rye&display=swap');
+
+@font-face{
+    font-family: "fliegeMono";
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+    src: url('FliegeMono-ExtraLight.otf') format('opentype');
+}
+
+@font-face{
+    font-family: "fliegeMono";
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    src: url('FliegeMono-ExtraBold.otf') format('opentype');
+}
+
 #body{
     font-family: "Farro";
 }
@@ -60,4 +78,16 @@ h1{
 
 #roboto_par{
     font-family: "Roboto";
+}
+
+#h4{
+    font-family: "Roboto";
+}
+
+h1{
+    font-family: 'fliegeMono';
+}
+
+#spann{
+    font-family: 'fliegeMono';
 }
