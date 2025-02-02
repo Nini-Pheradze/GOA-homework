@@ -1,0 +1,31 @@
+a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: normal;
+    color: rgb(0, 0, 255);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    font-size: 20px; 
+    font-weight: bold; 
+    color: #FF6347; 
+}
+
+a:active {
+    font-size: 14px;
+    font-weight: lighter; 
+    color: rgb(128, 128, 128); 
+}
+
+table {
+    border: 5px solid green;
+    width: 100%; 
+    border-collapse: collapse; 
+}
+
+td {
+    border: 5px solid green; 
+    padding: 10px; 
+    text-align: center; 
+}
