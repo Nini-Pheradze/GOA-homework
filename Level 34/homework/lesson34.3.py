@@ -7,4 +7,5 @@ def Return_Statement(number):
 
     print(number)
 
-Return_Statement(int(input("Enter number: ")))
+Return_Statement(input("Enter number: "))
+#done

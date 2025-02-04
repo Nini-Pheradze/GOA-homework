@@ -1,7 +1,12 @@
 # Find the Maximum: Create a function that takes a list of numbers and uses a loop to find and return the maximum number.
 
-def Find_the_Maximum(list):
-    list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+def find_max(numbers):
+    max_num = numbers[0]
 
-    for char in list:
-        if char in list 
+    for num in numbers:
+        if num > max_num: max_num = num
+    return max_num
+
+print(find_max([3, 5, 7, 2, 8, 1]))
+
+#done
