@@ -36,10 +36,10 @@ def bool_to_word(boolean):
         return "No"
 
 # 8. Sum of positive
-def positive_sum(arr):
+def positive_sum(arr): 
     res = 0
     for i in arr:
-        if i > 0:
+        if i > 0 : 
             res += i
     return res
 
@@ -55,5 +55,5 @@ def remove_char(s):
 def square_sum(numbers):
     result=0
     for i in numbers:
-        result +=i**2
+        result += i ** 2
     return result
