@@ -1,0 +1,24 @@
+table, th, td {
+    border: 1px solid hsl(172, 74%, 38%);
+    border-collapse: collapse
+}
+
+#table1 th:nth-child(1){
+    background-color: rgb(49, 156, 126);
+    color: #ffffff;
+}
+
+#table1 tr:nth-child(1){
+    background-color: #ffffff;
+    color: hsl(0, 6%, 3%);
+}
+
+#table1 tr:nth-child(2){
+    background-color: #ffffff;
+    color: hsl(0, 6%, 3%);
+}
+
+#table1 tr:nth-child(4){
+    background-color: hsl(0, 19%, 90%);
+    color: rgb(17, 101, 73);
+}
