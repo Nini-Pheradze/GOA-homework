@@ -1,0 +1,32 @@
+body{
+    background-color: hsl(95, 52%, 49%);
+}
+
+table, th, td{
+    border: solid 1px #ffffff;
+    border-collapse: collapse;
+}
+
+#table tr:nth-child(1){
+    background-color: #e3bb72;
+}
+
+#table tr:nth-child(2), #table tr:nth-child(3), #table tr:nth-child(4), #table tr:nth-child(5){
+    background-color: hwb(40 99% 0%);
+    color: hsl(0, 0%, 0%);
+}
+
+/*  Remove the default bullet points from an unordered list. 
+Style every even list item with a different background color.
+Change the text color of every third list item.
+Add a custom icon or emoji as the list-style for all items.
+Make the first and last list items bold.*/
+ul:nth-child(even){
+    list-style-type: none;
+    background-color: #2bff00;
+    list-style: lower-latin initial none;
+}
+
+ul:nth-child(3n){
+    color: #e3bb72;
+}
