@@ -48,7 +48,7 @@ def basic_op(operator, value1, value2):
 # Keep Hydrated!
 
 def litres(time):
-    return time // 2
+    return time // 2 # აბრუნებს 
 
 
 # Century From Year
