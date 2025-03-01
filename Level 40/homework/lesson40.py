@@ -129,14 +129,18 @@ def past(h, m, s):
 
 # Are You Playing Banjo?
 def are_you_playing_banjo(name):
-    if name[0].lower == "r":
-        return name + " plays banjo" 
-    else: 
-        return name + " does not play banjo"
-
+    for i in name:
+        if i == "r" or i == "R": 
+            return name + ' ' + "plays banjo" # იმ შემთხვევაში თუ სახელში არის "r" ან "R"
+        else : 
+            return name + ' ' + "does not play banjo"
+        
 
 # Abbreviate a Two Word Name
 def abbrev_name(name):
-    parts = name.split()
-    initials = parts[0][0].upper() + '.' + parts[1][0].upper()
-    return initials
+    name = name.split()
+
+    frist_name = (name[0][0]).upper()
+    last_name = (name[1][0]).upper()
+
+    return frist_name + '.' + last_name
