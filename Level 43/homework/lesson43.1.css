@@ -1,0 +1,30 @@
+#header{
+    background-color: #98f50c;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    color: #000000;
+    font-weight: 200;
+}
+
+#main{
+    display: flex;
+    flex-direction: row;
+    color: #000000;
+    font-weight: 200;
+    padding-left: 10px;
+    padding-right: 60px;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    height: 100vh;
+}
+
+#footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-weight: 200;
+    background-color: #98f50c;
+    padding-bottom: 50px;
+    padding-left: 10px;
+}

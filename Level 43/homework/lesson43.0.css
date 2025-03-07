@@ -1,0 +1,20 @@
+/* თქვენი სიტყვებით ახსენით რა არის flexbox და როდის ვიყენებთ მას */
+/* Flexbox არის განლაგების მეთოდი ელემენტების რიგებში ან სვეტებში მოწყობისთვის. Flexbox აადვილებს მოქნილი საპასუხო განლაგების სტრუქტურის შემუშავებას. */
+
+/* ნავბარი */
+
+body{
+    background-color: hsl(240, 43%, 9%);
+}
+
+#h2h1{
+    display: flex;
+    color: white;
+    justify-content: space-evenly;
+    align-items: center;
+    height: auto;
+    flex-direction: row;
+    font-size: larger;
+    border: solid 8px;
+    background-color: hsl(240, 76%, 7%);
+}
