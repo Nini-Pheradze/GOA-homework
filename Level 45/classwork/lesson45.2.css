@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(60, 107, 12);
+    height: 70vh;
+    align-items: flex-start;
+    flex-flow: column wrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.div-main{
+    width: 250px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+h2{
+    font-size: 40px;
+}

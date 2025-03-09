@@ -1,0 +1,40 @@
+main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#div1, #div3{
+    height: 15%;
+    background-color: aqua;
+    color: #e4ebeb;
+    font-size: 40px;
+    padding-left: 30px;
+    font-weight: 100;
+}
+
+#div2{
+    height: 70%;
+    width: 100%;
+    display: flex;
+}
+
+#div2-1{
+    width: 20%;
+    background-color: #d90e0e;
+    color: #e4ebeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+#div2-2{
+    width: 80%;
+    background-color: hsl(58, 88%, 45%);
+    color: #e4ebeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
