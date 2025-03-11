@@ -1,0 +1,41 @@
+#items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    order: 1;
+}
+
+#item1, #item2{
+    flex-grow: 1;
+}
+
+#item3{
+    flex-grow: 2;
+}
+
+#divblock{
+    display: flex;
+    text-align: center;
+    flex-direction: column; 
+    height: 100vh;
+    justify-content: flex-start;
+}
+
+#small{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: auto;
+}
+
+body{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+#heading{
+    flex-direction: row;
+}
