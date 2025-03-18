@@ -1,0 +1,46 @@
+#parnet{
+    height: 800px;
+    width: 800px;
+    border: 3px dotted black;
+    position: relative;
+}
+
+.child{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    text-align: center;
+    color: hsl(0, 100%, 97%);
+    font-size: 20px;
+    font-weight: 900;
+}
+
+#child1{
+    background-color: #dc1414;
+    left: 0px;
+    top: 0px;
+}
+
+#child2{
+    background-color: chartreuse;
+    right: 0px;
+    top: 0px;
+}
+
+#child3{
+    background-color: darkgrey;
+    top: 325px;
+    left: 325px;
+}
+
+#child4{
+    background-color: blue;
+    left: 0px;
+    bottom: 0px;
+}
+
+#child5{
+    background-color: #cc00ff;
+    left: 0px;
+    bottom: 0px;
+}
