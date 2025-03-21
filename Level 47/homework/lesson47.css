@@ -1,5 +1,107 @@
+/* <!-- Center a Div Horizontally – Place a div in the center of the page horizontally. --> */
 #div1{
     text-align: center;
     border: 1px;
     padding: 10px;
+    margin-top: 100px;
+}
+
+/* Move an Image to the Right – Position an image so it appears on the right side of its container. */
+#div2{
+    background-image: url("https://transforms.stlzoo.org/production/animals/amur-tiger-01-01.jpg?w=1200&h=1200&auto=compress%2Cformat&fit=crop&dm=1658935145&s=95d03aceddd44dc8271beed46eae30bc");
+    width: 100%;
+    height: 200px; 
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 400px;
+}
+
+/* Stick a Header at the Top – Make a header stay at the top of the page when scrolling. */
+h1{
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    background-color: hsl(0, 66%, 45%); 
+    color: white; 
+    padding: 10px 20px; 
+}
+
+/* Move a Button to the Bottom of a Div – Position a button at the bottom of a div without using margins. */
+#div3{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.click{
+    background-color: aqua;
+    justify-self: center;
+}
+
+/* Place Text Over an Image – Add a text label inside an image and position it in the center. */
+#div4{
+    background-image: url("https://transforms.stlzoo.org/production/animals/amur-tiger-01-01.jpg?w=1200&h=1200&auto=compress%2Cformat&fit=crop&dm=1658935145&s=95d03aceddd44dc8271beed46eae30bc");
+    height: 100vh;
+    width: 800px;
+    color: hsl(0, 0%, 93%);
+    text-align: center;
+    font-size: large;
+    font-weight: 300;
+}
+
+/* Fix a Footer to the Bottom of the Page – Make sure a footer always stays at the bottom of the page. */
+footer{
+    text-align: center; /* Center text */
+    padding: 10px 0;
+    color: #000;
+    background-color: aliceblue;
+}
+
+/* Move a Box Slightly Up – Adjust the position of a box to move slightly up without using margins. */
+#div5{
+    position: relative;
+}
+
+/* Align Two Elements Side by Side – Place two div elements next to each other inside a container. */
+.box{
+    display: flex;
+    background-color: blue;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+#div6{
+    flex-direction: row;
+}
+
+/* Float an Image to the Left – Make an image float to the left, with text wrapping around it. */
+#div7{
+    float: left;
+    margin-right: 20px;
+}
+
+
+/* Add Space Between Two Elements – Use positioning to create a gap between two div elements. */
+.container {
+    position: relative;
+    width: 300px;
+    height: 300px; 
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+}
+
+.boxes{
+    width: 100px;
+    height: 100px;
+    background-color: #044054;
+    text-align: center;
+    line-height: 100px;
+    color: hsl(0, 68%, 15%);
 }
