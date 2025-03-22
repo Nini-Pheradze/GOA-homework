@@ -1,0 +1,16 @@
+#div1:active {
+transform: rotate(30deg)
+}
+
+#div2{
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    transition: font-size 1s, color 2s, background-color 2s;
+}
+
+#div2:active{
+    color: #000;
+    font-size: 25px;
+    background-color: white;
+}
