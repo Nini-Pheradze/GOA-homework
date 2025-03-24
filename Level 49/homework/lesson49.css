@@ -1,0 +1,131 @@
+/* Hover Animation: Create a button that changes its background color when hovered over. */
+
+#button{
+    background-color: black;
+    color: hsl(0, 9%, 91%);
+    transition: color 2s, background-color 2s;
+}
+
+#button:hover{
+    background-color: #f3e6e6;
+    color: black;
+}
+
+/* Transition Effect: Design a link that smoothly changes color when hovered over. */
+#atag{
+    background-color: #ff7f7f;
+    color:blue;
+    transition: color 2s ease;
+}
+
+#atag:hover{
+    background-color: #ff7f7f;
+    color: #fffdfd;
+}
+
+/* Scaling Effect: Create an image that slightly scales up when hovered over. */
+#img1{
+    width: 500px; 
+    height: auto;
+    transition: transform 0.3s ease; 
+}
+
+#img1:hover{
+    transform: scale(1.1); 
+}
+
+/* Text Hover Effect: Make a paragraph where the text color changes gradually on hover. */
+#paragraph{
+    color: blueviolet;
+    background-color: blanchedalmond;
+    font-size: 100px;
+    font-weight: 400;
+    transition: color 1.5s;
+}
+
+#paragraph:hover{
+    color: aqua;
+}
+
+/* Border Animation: Design a box with a border that changes thickness smoothly when hovered. */
+#hover{
+    display: flex;
+    font-size: 50px;
+    font-weight: 40px;
+    transition: border-width 4s;
+    color: chartreuse;
+    background-color: chocolate;
+    border: 4px solid #3498db;
+}
+
+#hover:hover{
+    font-size: 75px;
+    border-width: 8px;
+    border-color: #ff7f7f;
+}
+
+/* Button Press Effect: Create a button that appears to "press down" (scale down slightly) when clicked. */
+#press{
+    display: flex;
+    font-size: 30px;
+    font-weight: 35px;
+    border: 4px solid #ff7f7f;
+    transition: border-width 2s;
+}
+
+#press:hover{
+    border-width: 8px;
+    border-color: #3498db;
+}
+
+/* Opacity Transition: Create a div that fades out to 50% opacity when hovered over. */
+#lorem{
+    padding: 40px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #3498db; 
+    color: white;
+    border-radius: 10px;
+    transition: opacity 0.3s ease; 
+}
+
+#lorem:hover{
+    opacity: 0.5;
+}
+
+/* Padding Animation: Design a box where the padding increases smoothly on hover. */
+#padding{
+    padding: 20px;
+    font-size: 20px;
+    background-color: #3498db; 
+    color: white;
+    transition: padding 4s;
+}
+
+#padding:hover{
+    padding: 40px;
+}
+
+/* Rotation Effect: Make an icon that rotates slightly when hovered over. */
+#lorem4:hover{
+    font-size: 30px;
+    font-weight: 200;
+    background-color: blueviolet;
+    color: #f3e6e6;
+    transform: rotate(5deg);
+}
+
+/* Shadow Animation: Create a card with a box shadow that grows and darkens smoothly on hover. */
+#lorem2{
+    padding: 20px;
+    background-color: #ffffff;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px; 
+    transition: box-shadow 0.3s ease;
+}
+
+#lorem2:hover{
+    box-shadow: 0 12px 24px 
+}
