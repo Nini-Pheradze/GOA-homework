@@ -8,3 +8,9 @@ except TypeError :
     print("It's typeerror")
 
 #მომხმარებელს შემოატანინეთ რაღაც მონაცემი (მაგ:სახელი ან გვარი) და try,except ბლოკების საშუალებით გააკონტროლეთ ყველა ერორის შემთხვევა რაც არსებობს
+user = str(input("Enter Your Fullname: "))
+try:
+    changed = int(f"Enter {user}")
+
+except:
+    print("Everything is incorrect!")
