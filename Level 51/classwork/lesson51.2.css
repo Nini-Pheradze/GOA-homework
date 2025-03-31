@@ -1,0 +1,38 @@
+#div1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: brown;
+}
+
+#div1{
+    width: 150px;
+    height: 150px;
+    background-color: chartreuse;
+    border-radius: 50%;
+    animation-name: circle1;
+    animation-duration: 7s;
+}
+
+@keyframes circle1{
+    from{
+        transform: scale(1);
+    }
+
+    20%{
+        transform: translate(100px, -150) scale(0.6);
+    }
+
+    50%{
+        transform: translate(250px, -20px) scale(2);
+    }
+
+    70%{
+        transform: translate(400px, 150px) scale(3);
+    }
+
+    to{
+        transform: translate(550px, -10px) scale(3);
+    }
+}

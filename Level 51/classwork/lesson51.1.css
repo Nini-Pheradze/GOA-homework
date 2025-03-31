@@ -1,0 +1,19 @@
+/* გამოიყენეთ transition და როდესაც div ბლოკზე მოხდება hover მოვლენა, შეცვალეთ დივ ბლოკის ფონის ფერი. ეს transition უნდა მიმდინარეობდეს 0.3 წამი  */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #7f1313;
+}
+
+#sec-div{
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    transition: 0.3s;
+}
+
+#sec-div:hover{
+    background-color: blueviolet;
+}
