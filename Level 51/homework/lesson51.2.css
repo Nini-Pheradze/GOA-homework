@@ -1,0 +1,38 @@
+#low{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#low:hover{
+    display: flex;
+    width: 250px;
+    height: 250px;
+    background-color: blue;
+    border-radius: 50%;
+    animation-duration: 3s;
+    animation-name: low1;
+}
+
+@keyframes low1{
+    from{
+        transform: translate(100px, 150px) scale(0.5);
+    }
+
+    20%{
+        transform: translate(100px, -150px) scale(1);
+    }
+
+    55%{
+        transform: translate(250px, -20px) scale(2);
+    }
+
+    80%{
+        transform: scale(2) translate(400px, 200px);
+    }
+
+    to{
+        transform: scale(3) translate(550px, -10px);
+    }
+}

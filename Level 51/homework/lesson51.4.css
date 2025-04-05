@@ -1,0 +1,29 @@
+#row{
+    display: flex;
+    height: 100vh;
+    justify-content: start;
+    align-items: center;
+}
+
+#row:hover{
+    height: 270px;
+    width: 270px;
+    border-radius: 50%;
+    background-color: yellow;
+    animation-duration: 2s;
+    animation-name: row1;
+}
+
+@keyframes row1{
+    0%{
+        left: 0px;
+    }
+
+    50%{
+        left: 10px;
+    }
+
+    100%{
+        left: 20px;
+    }
+}

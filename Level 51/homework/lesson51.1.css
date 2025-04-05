@@ -2,35 +2,38 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 #hovered-circle:hover{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: #d61017;
+    display: flex;
+    width: 250px;
+    height: 250px;
+    border-radius: 60%;
+    background-color: black;
+    color: antiquewhite;
     animation-name: circle1;
-    animation-duration: 7s;
+    animation-duration: 3s;
 }
 
 @keyframes circle1{
     from{
-        transform: translate(100px, -150px) scale(0.6);
+        transform: scale(0.5) translate(100px, 150px);
     }
 
     20%{
-        transform: translate(250px, -20px) scale(1.6);
+        transform: scale(1) translate(100px, -150px);
     }
 
     55%{
-        transform: translate(400px, 150px) scale(2);
+        transform: scale(2) translate(250px, -20px);
     }
 
     80%{
-        transform: translate(550px, -10px) scale(1.5);
+        transform: scale(2) translate(400px, 200px);
     }
 
     to{
-        transform: translate(550px, -10px) scale(3);
+        transform: scale(2) translate(550px, -10px);
     }
 }
