@@ -1,5 +1,5 @@
 # CODEWARS
-
+# done on classwork
 def double_char(s):
     res = ""
     
