@@ -1,38 +1,61 @@
-#div1{
+#main-div{
+    width: 800px;
+    height: 600px;
+    gap: 50px;
+    background-color: gray;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: brown;
+    flex-wrap: wrap;
 }
 
-#div1{
-    width: 150px;
-    height: 150px;
-    background-color: chartreuse;
+.one, .two, .three, .four, .five, .six{
+    height: 200px;
+    width: 200px;
+    border-radius: 40px;
+    background-color: white;
+    position: relative;
+}
+
+.black{
+    width: 30px;
+    height: 30px;
+    background-color: black;
     border-radius: 50%;
-    animation-name: circle1;
-    animation-duration: 7s;
+    position: absolute;
 }
 
-@keyframes circle1{
-    from{
-        transform: scale(1);
-    }
+#one-1, #three-2, #five-5{
+    left: 85px;
+    top: 85px;
+}
 
-    20%{
-        transform: translate(100px, -150) scale(0.6);
-    }
+#two-1, #three-1, #four-1, #five-1, #six-1{
+    left: 20px;
+    top: 20px;
+}
 
-    50%{
-        transform: translate(250px, -20px) scale(2);
-    }
+#two-2, #three-3, #four-3, #five-3, #six-4{
+    right: 20px;
+    bottom: 20px;
+}
 
-    70%{
-        transform: translate(400px, 150px) scale(3);
-    }
+#four-2, #five-2, #six-2{
+    right: 20px;
+    bottom: 20px;
+}
 
-    to{
-        transform: translate(550px, -10px) scale(3);
-    }
+#four-4, #five-4, #six-5{
+    left: 20px;
+    bottom: 20px;
+}
+
+#six-3{
+    top: 85px;
+    right: 20px;
+}
+
+#six-6{
+    top: 85px;
+    left: 20px;
 }

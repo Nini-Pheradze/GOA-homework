@@ -1,0 +1,26 @@
+/* პირველ რიგში, შეადგინეთ keyframes-ის გამოყენებით ანიმაცია, რომელსაც ექნება 2 keyframe.
+
+შემდეგ გამოიყენეთ ეს ანიმაცია ელემენტზე და ყველანაირი ინფორმაცია ანიმაციის შესახებ გააერთიანეთ animation კუთვნილებაში. ანიმაცია უნდა გაგრძელდეს 5 წამი, სიჩქარის ფუნქცია იყოს linear და ანიმაცია განმეორდეს უსასრულოდ */
+#div1{
+    width: 100px;
+    height: 100px;
+    background-color: teal;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-duration: 5s;
+    animation-name: div;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+@keyframes div {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(300px);
+    }
+}
