@@ -1,0 +1,16 @@
+/* Set an animation to start 2 seconds after the page loads.
+Create a sequence of three elements animating one after another using different animation-delay values.
+Make a fading effect that lasts for exactly 10 seconds. */
+
+#divsec{
+    width: 100px;
+    height: 100px;
+    background-color: tomato;
+    animation: fadeIn 3s ease forwards;
+    animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

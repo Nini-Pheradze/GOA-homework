@@ -1,0 +1,21 @@
+/* Animate a bouncing ball that repeats exactly 3 times.
+Set up an infinite animation of a loading spinner.
+Create an animation that runs only once and then stops.
+Use a class toggle to switch between an animation that loops and one that doesn't. */
+#ball{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: flex;
+    border-radius: 50%;
+    animation: divball 1s ease-in-out 3;
+}
+
+@keyframes divball{
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-100px) rotate(360deg);
+    }
+}
