@@ -1,0 +1,19 @@
+#parent{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.child{
+    flex: 1;
+    border: 1px solid red;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 800px) {
+    .parent {
+        flex-direction: column; 
+    }
+}
