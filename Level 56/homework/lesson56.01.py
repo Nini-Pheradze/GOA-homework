@@ -273,4 +273,155 @@ print(result)
 # N39
 # Function to check if a number is even or odd
 # Task: Write a function that takes an integer as input and returns whether it is even or odd.
+def even_or_odd(number):
+    if number % 2 == 0: # for finding even nums
+        return "Even"
+    else:
+        return "Odd"
 
+print(even_or_odd(7)) # input
+print(even_or_odd(24)) # input
+
+# N40
+# Function to calculate the area of a rectangle
+# Task: Write a function that takes the length and width of a rectangle as arguments and returns the area.
+def rectingle(length, width):
+    return length * width # the length and width of a rectangle
+print(rectingle(15, 30))
+print(rectingle(14, 28))
+
+
+# N41
+# Function to reverse a string
+# Task: Write a function that takes a string as input and returns the string reversed.
+def reverse(string):
+    return string[::-1] # for reversing string
+
+print(reverse("string"))
+
+# N42
+# Create and print a tuple
+# Task: Create a tuple with 3 elements (e.g., an integer, a string, and a float) and print the tuple.
+first_tuple = (2010, "Nino", 0.8) # an integer, a string, and a float
+print(first_tuple)
+
+# N43
+# Access an element in a tuple
+# Task: Create a tuple with several items and print the second element (index 1) of the tuple.
+tuple2 = ("N", "L", 100, "E", "P") # several items
+print(tuple2[1]) # For printing second item
+
+# N44
+# Find the length of a tuple
+# Task: Create a tuple and use the len() function to print the length of the tuple.
+tuple3 = (1, 2, 3, 4, 5, "puppy", "kitty") # for the length of the tuple
+print(len(tuple3))
+
+
+# N45
+# Concatenate two tuples
+# Task: Create two tuples and use the + operator to concatenate them, then print the result.
+tuple4 = (1, 2, 3)
+tuple5 = ("a", "b", "c")
+
+res = tuple4 + tuple5 # for concatenate
+print(res)
+
+
+# N46
+# Check if an item exists in a tuple
+# Task: Create a tuple and use an if statement to check if a specific element exists in the tuple. Print "Found" if it exists, otherwise print "Not found".
+tuple6 = (5, 10, 15, 20, 25, 30, 45)
+if 10 in tuple6: # for finding item 
+    print("Found!") # if there is
+
+else:
+    print("Not found!") # if there is not
+
+
+# N47
+# Create and print a set
+# Task: Create a set with 3 different elements (e.g., numbers or strings) and print the set.
+set1 = {"Pheradze", "Nini", 2010}
+print(set1)
+
+# N48
+# Check if an element is in a set
+# Task: Create a set and use an if statement to check if a specific element is in the set. Print "Yes" if the element is found, otherwise print "No".
+set2 = {11, 22, 33, 44}
+if 11 in set2: # if an element is in a set
+    print("YES")
+
+else:
+    print("NO")
+
+
+# N49
+# Add an element to a set
+# Task: Create a set, add a new element to it using the add() method, and print the updated set.
+set3 = {2, 4, 6, 8, 10, 12, 14, 16, 18}
+set3.add(20) # for adding an element
+print(set3)
+
+# N50
+# Remove an element from a set
+# Task: Create a set, remove an element using the remove() method, and print the updated set.
+set4 = {2, 4, 6, 8, 10, 12, 14, 16, 18}
+set4.remove(2) # for removing an element
+print(set4)
+
+# N51
+# Find the union of two sets
+# Task: Create two sets and use the | operator to find their union, then print the result.
+set5 = {1, 2, 3, 4, 5}
+set6 = {6, 7, 8, 9, 10}
+union = set5 | set6 # union of two sets
+print(union)
+
+# N52
+# Create and print a dictionary
+# Task: Create a dictionary with at least two key-value pairs (e.g., name and age), and print the dictionary.
+dict0 = {
+    "name" : "Nini",
+    "surname" : "Pheradze",
+    "age" : 14}
+print(dict0)  # printing dict0
+
+
+# N53
+# Access a value by key
+# Task: Given a dictionary, access and print the value associated with a specific key.
+dict1 = {
+    "name" : "Nini",
+    "surname" : "Pheradze",
+    "age" : 14
+}
+print(dict1["name"]) # for printing specific key and value
+
+# N54
+# Add a new key-value pair to a dictionary
+# Task: Create a dictionary and add a new key-value pair to it. Print the updated dictionary.
+dict2 = {
+    "name" : "Nini",
+    "surname" : "Pheradze",
+    "age" : 14
+}
+
+dict2["country"] = "Georgia"  # adding a new Key-value
+print(dict2)
+
+
+# CODEWARS
+# N55
+# Basic variable assignment
+a = "code" # there was double equel sign
+b = "wa.rs" 
+name = a + b 
+
+# N56
+# get character from ASCII Value
+def get_char(c):
+    if 0 <= c <= 127:
+        return chr(c)
+    else:
+        return "Invalid ASCII code"
