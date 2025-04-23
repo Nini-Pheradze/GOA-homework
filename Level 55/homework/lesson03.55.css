@@ -2,15 +2,40 @@
 Create a sequence of three elements animating one after another using different animation-delay values.
 Make a fading effect that lasts for exactly 10 seconds. */
 
-#divsec{
-    width: 100px;
-    height: 100px;
-    background-color: tomato;
-    animation: fadeIn 3s ease forwards;
+.balls{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: blueviolet;
+    position: relative;
     animation-delay: 2s;
+    animation-fill-mode: both;
+    animation: page-load 1s ease-in-out 1;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+@keyframes page-load{
+    from { transform: translateX(-100%);}
+    t0 { transform: translateX(0);}
+}
+
+#ball1{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#ball2, #ball1, #ball3{
+    width: 50px;
+    height: 50px;
+    background-color: teal;
+    animation: animation 0.5s ease-out forwards;
+}
+
+#ball1{animation-delay: 0s;}
+#ball2{animation-delay: 0.5s;}
+#ball3{animation-delay: 1s;}
+
+@keyframes animation {
+    0% { transform: scale(1); background-color: teal; }
+    100% { transform: scale(1.5); background-color: limegreen; }
 }
