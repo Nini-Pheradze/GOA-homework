@@ -49,3 +49,35 @@ body {
 #div-4-3{
     grid-area: 3 / 9 / 4 / 13;
 }
+
+#div-3-1 {
+    grid-area: 4 / 1 / 5 / 4;
+}
+#div-3-2 {
+    grid-area: 4 / 4 / 5 / 7;
+}
+#div-3-3 {
+    grid-area: 4 / 7 / 5 / 10;
+}
+#div-3-4 {
+    grid-area: 4 / 10 / 5 / 13;
+}
+
+#div-2-1 {
+    grid-area: 5 / 1 / 6 / 3;
+}
+#div-2-2 {
+    grid-area: 5 / 3 / 6 / 5;
+}
+#div-2-3 {
+    grid-area: 5 / 5 / 6 / 7;
+}
+#div-2-4 {
+    grid-area: 5 / 7 / 6 / 9;
+}
+#div-2-5 {
+    grid-area: 5 / 9 / 6 / 11;
+}
+#div-2-6 {
+    grid-area: 5 / 11 / 6 / 13;
+}

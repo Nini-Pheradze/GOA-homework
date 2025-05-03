@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #2a2a2a;
+    color: #333;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 250px 120px 120px;
+    gap: 8px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    position: relative;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number {
+    background-color: #f5f5f5;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.number span {
+    transform: rotate(-45deg);
+    font-weight: bold;
+}
+
+.area-label {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* Area 1 - Hero */
+.item-1 {
+    grid-column: 1 / 4;
+    grid-row: 1;
+    background-color: #e5a9f0;
+}
+
+/* Area 2 */
+.item-2 {
+    grid-column: 1 / 6;
+    grid-row: 2;
+    background-color: #e9a1f0;
+}
+
+/* Area 3 */
+.item-3 {
+    grid-column: 4 / 6;
+    grid-row: 1 / 2;
+    background-color: #87cefa;
+}
+
+/* Area 4 */
+.item-4 {
+    grid-column: 4 / 6;
+    grid-row: 2 / 3;
+    background-color: #7cd1e8;
+}
+
+/* Areas 5-9 */
+.item-5, .item-6, .item-7, .item-8, .item-9 {
+    grid-row: 3;
+    background-image: linear-gradient(to bottom, #ffb6c1, #ffd700);
+}
+
+.item-5 { grid-column: 1 / 2; }
+.item-6 { grid-column: 2 / 3; }
+.item-7 { grid-column: 3 / 4; }
+.item-8 { grid-column: 4 / 5; }
+.item-9 { grid-column: 5 / 6; }
