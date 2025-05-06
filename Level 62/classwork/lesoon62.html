@@ -1,0 +1,48 @@
+<!-- html-ში დაამატეთ ერთი ღილაკი, რომლის id იქნება button-main. -->
+
+<!-- ეს ღილაკი id-ის გამოყენებით წამოიღეთ js-ში და მისი ტექსტკონტენტი გაუტოლეთ თქვენს სახელს. -->
+
+<html>
+    <body>
+        <button id="button-main1">Click Here</button>
+
+        <script>
+            let myButton = document.getElementById("button-main1")
+            myButton.textContent = "Nini"
+        </script>
+
+        <!-- html-ში დაამატეთ პირველი დონის სათაური, რომლის id იქნება h1-1. ეს ელემენტი წამოიღეთ js-ში და მას შეუცვალეთ: ფერი, ფონის ფერი, font weight, font size, border radius -->
+        
+        <h1 id="h1-1">Lorem.</h1>
+
+        <script>
+            let h1 = document.getElementById("h1-1");
+            h1.style.color = 'white'
+            h1.style.backgroundColor = 'black'
+            h1.style.fontWeight = 'bold';
+            h1.style.fontSize = '38px';
+            h1.style.borderRadius = '15px';
+        </script>
+
+
+        <!-- html-ის დოკუმენტში დაამატეთ ერთი ღილაკი, რომლის ID იქნება button-main და ერთი პარაგრაფი, რომლის ID იქნება p-main.
+
+js-ში წამოიღეთ ორივე ელემენტი ID-ის გამოყენებით.
+
+ღილაკს შეუცვალეთ ფონი და ტექსტის ფერი, ხოლო პარაგრაფს შეუცვალეთ ფონტის ზომა და ტექსტ კონტენტი -->
+        <button id="button-main">click</button>
+        <p id="p-main">goa</p>
+
+        <script>
+            let button = document.getElementById("button-main");
+            let paragraph = document.getElementById("p-main")
+
+            button.style.backgroundColor = 'darkblue';
+            button.style.color = 'white';
+
+            paragraph.style.fontSize = "22px";
+            paragraph.textContent = "GOA";
+        </script>
+
+    </body>
+</html>
