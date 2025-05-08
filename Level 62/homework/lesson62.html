@@ -1,0 +1,51 @@
+<!-- Get the HTML element with the ID header and store it in a variable. -->
+<html>
+    <head><title>page</title></head>
+
+    <body>
+        <h1 id="header">About Us</h1>
+
+        <script>
+            let heading = document.getElementById('header');
+        </script>
+
+        <!-- Use getElementById to find the element with the ID description. -->
+        <p id="description">Lorem, ipsum.</p>
+        <script>
+            let par = document.getElementById('description');
+        </script>
+
+        <!-- Retrieve the element with the ID footer and assign it to a variable named footerElement.-->
+        <p id="footer">Lorem, ipsum dolor.</p>
+        <script>
+            let paragraph = document.getElementById('footerElement');
+        </script>
+
+        <!-- Get the text content of the element with the ID title and store it in a variable. -->
+        <h2 id="h2-1">Lorem.</h2>
+        <script>
+            let heading2 = document.getElementById('h2-1').textContent;
+        </script>
+        <!-- Change the text content of the element with the ID greeting to say "Welcome!" -->
+        <p id="greeting">Welcome!</p>
+        <script>
+            let greeting = document.getElementById(greeting).textContent = "Welcome!";
+        </script>
+        <!-- Set the text content of the element with the ID note to be empty. -->
+        <script>
+            document.getElementById("note").textContent = "";
+        </script>
+        <!-- Change the text color of the element with the ID heading to red. -->
+        <script>
+            document.getElementById("heading").style.color = "red";
+        </script>
+        <!-- Set the background color of the element with the ID box to yellow. -->
+        <script>
+            document.getElementById("box").style.backgroundColor = "yellow";
+        </script>
+        <!-- Make the font size of the element with the ID paragraph equal to 20px. -->
+        <script>
+            document.getElementById("paragraph").style.fontSize = "20px";
+        </script>
+    </body>
+</html>
