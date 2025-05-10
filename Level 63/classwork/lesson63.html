@@ -1,0 +1,21 @@
+<!-- შექმენით js-ის ფუნქცია, რომელიც წამოიღებს ნებისმიერ ელემენტს id-ის გამოყენებით და ამ ელემენტს შეუცვლის ტექსტის განლაგებას.
+
+როდესაც დავაკლიკებთ ამ ელემენტს, მაშინ უნდა გაეშვას ჩვენს მიერ შექმნილი ფუნქცია -->
+<html>
+    <head><title>javascript interal</title></head>
+
+    <body>
+        <p id="par">Click here</p>
+        <script> 
+            function text(id){
+                let p = document.getElementById(id);
+                p.style.textAlign = 'center';
+            }
+        </script>
+
+        <!-- შექმენით greet ფუნქცია, რომელიც პარაგრაფს შეუცვლის კონტენტს და ის გახდება "welcome {თქვენი სახელი}!". ეს ფუნქცია ჩაწერეთ external js-ის მეთოდით. როდესაც პარაგრაფს დავაკლიკებთ, უნდა გამოიძახოს ეს ფუნქცია -->
+        <p id="p1" onclick="greet()">Lorem ipsum dolor sit amet.</p>
+
+        <script src="main.js"></script>
+    </body>
+</html>
