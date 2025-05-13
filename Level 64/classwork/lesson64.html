@@ -1,0 +1,30 @@
+<!-- html-ში შექმენით ერთი form, სადაც გექნებათ ერთმანეთთან დაკავშირებული label და input. ფორმას ბოლოში გაუწერეთ დადასტურების ღილაკი.
+
+როდესაც ფორმა დადასტურდება (onsubmit ატრიბუტი), უნდა გამოიძახოთ ფუნქცია, რომელიც წამოიღებს ინფუთის მნიშვნელობას (.value) და კონსოლში გამოიტანს მას.
+
+კოდი ისე დაწერეთ, რომ ფორმის დადასტურებისას ვებსაიტი არ დარეფრეშდეს -->
+
+<html>
+    <head><title>javascript</title></head>
+
+    <body>
+        <script src="lesson64.js"></script>
+        
+        <form onsubmit="get">
+            <label for="username">Username: </label>
+
+            <input type="text" id="username" required>
+
+            <br><br><br>
+
+            <button type="submit">Submitted</button>
+        </form>
+
+
+        <!-- შექმენით ფუნქცია სახელად concStrings. ფუნქციაში უნდა გქონდეთ ორი ცვლადი და ორივეში შეინახეთ prompt-ით შემოტანილი ინფორმაცია. საბოლოოდ დაბეჭდეთ ამ ორი ცვლადის კონკატინაციის შედეგი alert box-ში -->
+
+        <button onclick="concStrings">click here</button>
+
+        <script src="lesson64.js"></script>
+    </body>
+</html>
