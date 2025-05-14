@@ -1,0 +1,55 @@
+<!-- Prompt the user for their favorite hobby and display it in an alert.
+
+Ask the user for their first and last name (two prompts), then concatenate and display the full name in an alert.
+
+Prompt the user for a message and update the text content of a <p> element on the page with it.
+
+Prompt the user for their favorite emoji and display it in an alert along with a thank you message.
+
+Prompt the user to enter a word and use document.title to set the page’s title to that word. -->
+
+<html>
+    <body>
+        <script src="lesson64.js"></script>
+
+        <button onclick="hobby()">Hobby</button>
+
+        <br><br><br>
+
+        <button onclick="fullName()">Click for Fullname</button>
+
+        <br><br><br>
+
+        <button onclick="userMessage()">click</button>
+
+        <p id="paragraph">Lorem ipsum dolor sit amet.</p>
+
+        <button onclick="favouriteEmoji()">Click Here</button>
+
+        <br><br><br>
+
+        <button onclick="pageTitle()">Page Title</button>
+
+        <!-- Create a form with a text input and a button. When the button is clicked, take the value from the text input and display it in an alert. -->
+
+        <form onsubmit="showInputValue()">
+        <input type="text" id="userInput" placeholder="Type something..." />
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Make a form with a color input and a submit button. When submitted, set the page’s background color to the selected color. -->
+
+        <form onsubmit="setBackgroundColor()">
+            <input type="color" id="colorPicker" />
+            <button type="submit">Apply Color</button>
+        </form>
+
+        <!-- Build a form with two text inputs (like "first name" and "last name") and a button. On button click, combine the values and display the full name inside an <h1> element on the page. -->
+
+        <form onsubmit="displayFullName()">
+            <input type="text" id="firstName" placeholder="First Name" required />
+            <input type="text" id="lastName" placeholder="Last Name" required />
+            <button type="submit">Show Full Name</button>
+        </form>
+    </body>
+</html>
