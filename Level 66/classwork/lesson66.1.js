@@ -18,4 +18,18 @@ compareNums(10, 12)
 compareNums(29, 3)
 
 
-// შექმენით ფორმა, რომელსაც მიანიჭებთ id-ს. ამ ფორმაში დაამატეთ ერთი ინფუთი და მას გაუწერეთ name ატრიბუტი. როდესაც ფორმა დადასტურდება, ვებსაიტი არ უნდა დარეფრეშდეს და ამ ინფუთის value უნდა გამოიტანოს alert box-მა
+function getFromData(e){
+    e.preventDefaault();
+
+    let from = document.getElementById("main-form");
+
+    let name = from.elements.name.value;
+
+    let surnmae = from.elements.surname.value;
+
+    let academy = from.elements.academy.value;
+
+    console.log(name, surname, academy);
+
+    from.reset()
+}
