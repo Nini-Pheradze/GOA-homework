@@ -37,8 +37,11 @@ function changeElemnts(){
 
     button.style.backgroundColor = "black";
 
-    button.style.color = "white"
+    button.style.color = "white";
 
+    h1.style.textAlign = "center";
 
-    h1.style.
+    body.style.backgroundColor = "green";
 }
+
+changeElemnts()

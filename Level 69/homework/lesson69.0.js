@@ -94,19 +94,7 @@ if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
 
 
 
-// 5) Check if a character is a vowel or a consonant.
-
-// Take a single character as input.
-
-// Use conditional statements to check if it’s a vowel (a, e, i, o, u) or a consonant.
-
-// Display the result.
-
-let char = propmt("Enter a single letter: ")
-
-
-
-//Check if a number is divisible by 3 and 5.
+// Check if a number is divisible by 3 and 5.
 
 // Take a number as input.
 
@@ -122,29 +110,18 @@ let char = propmt("Enter a single letter: ")
 
 // Not divisible by either
 
-let num = Number(propmt("Enter Number: "));
+let number = parseInt(prompt("Enter a number:"));
 
 
-
-
-
-// Check if a person is a child, teenager, adult, or senior based on age.
-
-// Take age as input.
-
-// Use conditional statements to classify:
-
-// 0–12: Child
-
-// 13–19: Teenager
-
-// 20–59: Adult
-
-// 60 and above: Senior
-
-// Display the category.
-
-
+if (number % 3 === 0 && number % 5 === 0) {
+    console.log("Divisible by both");
+} else if (number % 3 === 0) {
+    console.log("Divisible by 3 only");
+} else if(number % 5 === 0) {
+    console.log("Divisible by 5 only");
+} else {
+    console.log("Not divisible by either 3 or 5");
+}
 
 // Print numbers from 1 to 5.
 
