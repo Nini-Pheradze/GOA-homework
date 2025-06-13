@@ -126,4 +126,3 @@ def add_binary(a,b):
         binary = str(t % 2) + binary
         t //= 2
     return binary
-
