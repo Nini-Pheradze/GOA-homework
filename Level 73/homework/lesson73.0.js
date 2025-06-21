@@ -1,13 +1,19 @@
 // Select a <div> with the id content and use removeChild to remove its first child element.
+// Get the div with id "content"
+let contentDiv = document.getElementById("content");
 
-function removeChild() {
-    let div = document.getElementsById('div1');
+let first = contentDiv.children[0];
 
-    let p1 = div.p1;
-
-    div.removeChild(p1);
-}
-
-removeChild()
+if (first) {
+    contentDiv.removeChild(first);
+};
 
 // Create a <ul> with three <li> items, then use removeChild to remove the last <li> from the <ul>.
+
+const ul = document.getElementById("myList");
+
+const lastLi = ul.children[ul.children.length - 1];
+
+if (lastLi) {
+    ul.removeChild(lastLi);
+}
