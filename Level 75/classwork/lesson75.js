@@ -24,8 +24,11 @@ console.log(mixedArray);
 
 // ფუნქცია გამოიძახეთ ორჯერ, არგუმენტად გაუწერეთ განსხვავებული მასივები
 function traverseArr(arr) {
-    for (const item of arr) { 
-    console.log(item);
+    for(let i = 0; i < arr.length; i++){
+        console.log(arr[i]);
     }
 };
+
+traverseArr([1, 2, 3])
+traverseArr(['a', 'b'])
 
