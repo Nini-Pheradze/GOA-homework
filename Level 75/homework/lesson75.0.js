@@ -12,7 +12,7 @@ button.addEventListener('click', function() {
     clearInterval(interval1);
 });
 
-// // Change the background color of a web page every 3 seconds, and stop changing after 5 changes.
+// Change the background color of a web page every 3 seconds, and stop changing after 5 changes.
 
 let count1 = 1;
 let interval1 = setInterval(() => {
