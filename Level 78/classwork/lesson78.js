@@ -2,7 +2,7 @@
 
 // საბოლოოდ დაბეჭდეთ მეორე მასივი მთლიანად.
 
-let paragraphs = document.getElementsByClassName("p");
+let paragraphs = document.getElementsByTagName("p");
 
 
 let texts = [];
@@ -21,12 +21,18 @@ console.log(texts);
 
 let div = document.getElementById("div-main");
 
-for (let i = 1; i <= 5; i++) {
+let pCount = 1;
+
+for (let i = 1; i < 5; i++) {
     let p = document.createElement('p');
 
-    p.textContent = "Hello World!";
+    let pText = document.createTextNode('Hello World,' + String(pCount));
 
-    div-main.appendChild(p);
+    p.appendChild(pText)
+
+    pCount++;
+
+    div.appendChild(p);
 };
 
 
@@ -36,7 +42,7 @@ for (let i = 1; i <= 5; i++) {
 
 let mydiv = document.getElementById('div');
 
-let divblock = document.getElementsByTagName('p');
+const divblock = document.getElementsByTagName('p');
 
 for (let i = 0; i < divblock.length; i++) {
     divblock[i].style.color = "green";
