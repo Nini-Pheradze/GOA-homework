@@ -77,21 +77,24 @@ for (let i = 0; i < images.length; i++) {
 
 // Animate them moving right 10px every 200ms using setInterval.
 
-function circle() {
-    let divBlock = document.createElement('div');
-    divBlock.className = 'circle';
+let circle = [];
 
-    divBlock.style.width = '50px';
-    divBlock.style.height = '50px';
+for (let i = 0; i < 3; i++) {
+    let div = document.createElement("div");
+    div.classList.add("circle");
+    div.style.top = `${i * 60}px`; 
+    div.style.left = `0px`;
+    document.body.appendChild(div);
+    circle.push({ element: div, position: 0 });
+    };
 
-    divBlock.style.borderRadius = '50%';
+setInterval(() => {
+    circle.forEach((circle) => {
+        circle.position += 10;
+        circle.element.style.left = circle.position + "px";
+    });
+    }, 200);
 
-    divBlock.style.backgroundColor = 'purple';
-
-    document.body.appendChild(divBlock);
-
-    return divBlock;
-};
 
 
 
@@ -102,6 +105,18 @@ function circle() {
 
 // Give odd-indexed items a background color of lightgray.
 
+let li = document.getElementsByTagName('li');
+
+for (let i = 0; i < li.length; i++) {
+    if (i % 2 === 0) {
+        li[i].style.backgroundColor = "skyblue";
+    } else {
+        li[i].style.backgroundColor = "lightgray";
+    };
+};
+
+
+
 // ✅ Homework 6: Interactive Box Movement
 // Create one <div> and one <button> with JavaScript.
 
@@ -111,6 +126,32 @@ function circle() {
 
 // The background color randomly changes.
 
+let box = document.createElement('div');
+box.id = 'box';
+
+document.body.appendChild(box);
+
+let btn = document.createElement('button');
+btn.id = 'btn';
+
+document.body.appendChild(btn);
+
+let left = 0;
+
+function randomColor() {
+    return "rgb(" +
+    Math.floor(Math.random() * 256) + "," +
+    Math.floor(Math.random() * 256) + "," +
+    Math.floor(Math.random() * 256) + ")";
+};
+
+btn.onclick = function () {
+    left += 20;
+    box.style.left = left + "px";
+    box.style.backgroundColor = randomColor();
+};
+
+
 // ✅ Homework 7: Form Input Length Warning
 // Select all <input> elements of type "text".
 
@@ -118,23 +159,18 @@ function circle() {
 
 // If under 20, it stays white.
 
-// ✅ Homework 8: Dynamic Message List
-// Create a <ul> using JS.
+let input = document.getElementsByTagName('input');
 
-// Every 2 seconds, add a new <li> with text like "Message 1", "Message 2" etc.
+for (let i = 0; i < input.length; i++) {
+    let input = input[i];
 
-// Stop adding items after 10 messages.
-
-// ✅ Homework 9: Hide and Reveal
-// Create one <div> and one <button>.
-
-// When the button is clicked, the <div> hides (display: none).
-
-// After 5 seconds, it becomes visible again.
-
-// ✅ Homework 10: Element Counter by Tag
-// Prompt the user to enter a tag name (like div, p, img).
-
-// Count how many elements exist with that tag on the page.
-
-// Display the result in an alert.
+    if (input.type === "text") {
+        input.addEventListener('input', function (){ 
+            if (input.value.length > 20) {
+                input.style.backgroundColor = 'red';
+            } else {
+                input.style.backgroundColor = 'white';
+            };
+        });
+    };
+};
