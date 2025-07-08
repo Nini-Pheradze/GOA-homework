@@ -4,17 +4,17 @@
 
 // გამოიყენეთ do while ციკლი
 
-// let total = 0;
+let total = 0;
 
-// do {
-//     let number = Number(prompt("Enter Number: "));
+do {
+    let number = Number(prompt("Enter Number: "));
 
-//     if (!isNaN(number)) {
-//     total += number;
-//     } else {
-//     alert("Enter Another!");
-//     }
-// } while (total <= 100);
+    if (!isNaN(number)) {
+    total += number;
+    } else {
+    alert("Enter Another!");
+    }
+} while (total <= 100);
 
 // html-ის სტრუქტურაში ჩაამატეთ ერთი დაულაგებელი სია.
 
