@@ -32,18 +32,18 @@ while (x >= 1);
 
 // Ask the user to enter a number until they enter a number greater than 100.
 
-// let total = 0;
+let total = 0;
 
-// do {
-//     let user = Number(prompt('Enter Number: '));
+do {
+    let user = Number(prompt('Enter Number: '));
 
-//     if (isNaN(num)) {
-//         total += user;
-//     } else {
-//         alert('Enter Another!');
-//     }
-// }
-// while (total <= 100)
+    if (isNaN(num)) {
+        total += user;
+    } else {
+        alert('Enter Another!');
+    }
+}
+while (total <= 100)
 
 // Sum numbers from 1 to 10 and print the total using a do...while loop.
 
