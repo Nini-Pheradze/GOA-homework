@@ -69,8 +69,8 @@ hideDiv()
 
 // Show an alert with a custom message when a button is clicked.
 
-function showMessage() {
+function ShowMessage() {
     alert("Hello! This is a custom message.");
 }
 
-showMessage()
+ShowMessage()

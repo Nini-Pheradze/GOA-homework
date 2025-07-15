@@ -35,8 +35,8 @@ let words = ["banana", "apple", "pear", "orange"];
 words.sort();
 console.log(words);
 
-let userWord = prompt("Enter a fruit name: ");
-if (words.includes(userWord.toLowerCase())) {
+let UserWord = prompt("Enter a fruit name: ");
+if (words.includes(UserWord.toLowerCase())) {
     alert("Yes, it is.")
 } else {
     alert("No, it isn't.")
