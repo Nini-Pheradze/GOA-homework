@@ -40,3 +40,28 @@ console.log(
     })()
 );
 
+// ჩამოწერეთ block, function და glocal scope-ების თითო-თითო მაგალითი
+
+
+// function scope example
+
+function myAge() {
+    let age = 15;
+    console.log("My Age is " + age);
+};
+
+myAge();
+console.log(age);
+
+
+// global scope example
+let fullname = "Nini Pheradze";
+
+function greet() {
+    console.log("Hello, " + fullname + "!");
+};
+
+
+greet();
+console.log(fullname);
+
