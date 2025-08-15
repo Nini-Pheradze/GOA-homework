@@ -1,0 +1,110 @@
+body{
+    background-color: hsl(227, 75%, 14%);
+}
+
+.NavBar{
+    height: 50px;
+    width: 900px;
+    background-color: hsl(226, 25%, 17%);
+}
+
+.NavBar div{
+    height: 40px;
+    width: 850px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.Logo{
+    color: white;
+    height: 30px;
+    border: none;
+}
+
+.NavBarButton{
+    height: 30px;
+    background-color: hsl(225, 23%, 24%);
+}
+
+.Main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ExtensionsList{
+    margin-top: 45px;
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1{
+    color: white;
+}
+
+.All,.Active,.Inactive{
+    width: fit-content;
+    height: 30px;
+    border-radius: 40px;
+    background-color: hsl(225, 23%, 24%);
+    color: white;
+}
+
+.Box{
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(225, 23%, 24%);
+    width: 400px;
+    height: 170px;
+    border-radius: 5%;
+    align-items: center;
+}
+
+.TopBox{
+    display: flex;
+    gap: 15px;
+    width: 350px;
+}
+
+.TopBox h2 b{
+    font-size: medium;
+}
+
+.TopBox h2{
+    color: white;
+    font-size: x-large;
+}
+
+.BottomBox{
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    height: fit-content;
+}
+
+
+.BottomBox button{
+    background-color: hsl(225, 23%, 24%);
+    border-radius: 40px;
+    height: 30px;
+    width: 90px;
+}
+
+.toggle{
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.toggle input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
