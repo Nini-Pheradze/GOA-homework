@@ -1,126 +1,298 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
 
-body{
-    background-color: hsl(221, 100%, 96%);
-    font-family: "Hanken Grotesk", sans-serif;
-    font-optical-sizing: 500;
-    font-weight: 700;
-    font-style: 800;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.Main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
+        body {
+            background-color: hsl(221, 100%, 96%);
+            font-family: "Hanken Grotesk", sans-serif;
+            font-weight: 700;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
 
-.Result{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(to top,  hsl(241, 81%, 54%), hsl(252, 100%, 67%));
-    width: 300px;
-    height: 400px;
-    border-radius: 5%;
-}
+        .Main {
+            display: flex;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 600px;
+            width: 100%;
+        }
 
-.DetailedSummary{
-    width: 170px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color:  hsl(241, 100%, 89%);
-}
+        .Result {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+            padding: 40px 30px;
+            text-align: center;
+            flex: 1;
+            min-height: 400px;
+        }
 
-.DetailedSummary b {
-    font-size: x-large;
-    color: white;
-}
+        .Result h3 {
+            color: hsl(241, 100%, 89%);
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
 
-.Score{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 130px;
-    height: 130px;
-    border-radius: 100%;
-    color:  hsl(241, 100%, 89%);
-    background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
-}
+        .Score {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            color: hsl(241, 100%, 89%);
+            background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+            margin-bottom: 25px;
+        }
 
-.Score b {
-    font-size: xx-large;
-    color: white;
-}
+        .Score b {
+            font-size: 3rem;
+            color: white;
+            line-height: 1;
+        }
 
-.Result h3{
-    color: hsl(241, 100%, 89%);
-}
+        .Score span {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
 
-.Summary{
-    background-color: white;
-    height: 400px;
-    width: 300px;
-    border-radius: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+        .DetailedSummary {
+            max-width: 200px;
+        }
 
-.Reaction, .Memory, .Verbal, .Visual{
-    display: flex;
-    gap: 50px;
-    border-radius: 10px;
-    width: 170px;
-}
+        .DetailedSummary b {
+            font-size: 1.5rem;
+            color: white;
+            display: block;
+            margin-bottom: 15px;
+        }
 
-.Reaction {
-    background-color:  hsla(0, 100%, 67%, 0.2);
-    height: 40px;
-    justify-content: center;
-    align-items: center;
-}
+        .DetailedSummary p {
+            color: hsl(241, 100%, 89%);
+            font-size: 0.95rem;
+            line-height: 1.4;
+            font-weight: 500;
+        }
 
-.Memory {
-    background-color:  hsla(39, 100%, 56%);
-    height: 40px;
-    justify-content: center;
-    align-items: center;
-}
+        .Summary {
+            background-color: white;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1;
+        }
 
-.Verbal {
-    background-color:  hsla(166, 100%, 37%, 0.2);
-    height: 40px;
-    justify-content: center;
-    align-items: center;
-}
+        .Summary h3 {
+            color: hsl(224, 30%, 27%);
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
 
-.Visual {
-    background-color:  hsla(234, 85%, 45%, 0.3);
-    height: 40px;
-    justify-content: center;
-    align-items: center;
-}
+        .SummaryDetailed {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
 
-.SummaryDetailed{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
 
-button{
-    width: 190px;
-    height: 35px;
-    background-color: hsl(224, 38%, 27%);
-    border-radius: 15px;
-    color: white;
-}
+        .skill-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-button:hover{
-    cursor: grab;
-}
+        .skill-score {
+            color: hsl(224, 30%, 27%);
+        }
+
+        .skill-score .total {
+            opacity: 0.5;
+        }
+
+        .Reaction {
+            background-color: hsla(0, 100%, 67%, 0.1);
+            color: hsl(0, 100%, 67%);
+        }
+
+        .Memory {
+            background-color: hsla(39, 100%, 56%, 0.1);
+            color: hsl(39, 100%, 56%);
+        }
+
+        .Verbal {
+            background-color: hsla(166, 100%, 37%, 0.1);
+            color: hsl(166, 100%, 37%);
+        }
+
+        .Visual {
+            background-color: hsla(234, 85%, 45%, 0.1);
+            color: hsl(234, 85%, 45%);
+        }
+
+        button {
+            width: 100%;
+            height: 50px;
+            background-color: hsl(224, 30%, 27%);
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-family: inherit;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+        }
+
+        /* Mobile Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .Main {
+                flex-direction: column;
+                max-width: 400px;
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            .Result {
+                border-radius: 0 0 20px 20px;
+                padding: 30px 20px;
+                min-height: auto;
+            }
+
+            .Result h3 {
+                font-size: 1.1rem;
+                margin-bottom: 20px;
+            }
+
+            .Score {
+                width: 120px;
+                height: 120px;
+                margin-bottom: 20px;
+            }
+
+            .Score b {
+                font-size: 2.5rem;
+            }
+
+            .DetailedSummary b {
+                font-size: 1.3rem;
+                margin-bottom: 10px;
+            }
+
+            .DetailedSummary p {
+                font-size: 0.9rem;
+            }
+
+            .Summary {
+                padding: 30px 20px;
+                border-radius: 20px 20px 0 0;
+            }
+
+            .Summary h3 {
+                font-size: 1.1rem;
+                margin-bottom: 20px;
+            }
+
+            .skill-item {
+                padding: 12px;
+            }
+
+            button {
+                height: 45px;
+                font-size: 0.95rem;
+                margin-top: 20px;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            body {
+                padding: 0;
+            }
+
+            .Main {
+                max-width: 100%;
+                min-height: 100vh;
+                border-radius: 0;
+            }
+
+            .Result {
+                border-radius: 0;
+                padding: 25px 15px;
+            }
+
+            .Score {
+                width: 100px;
+                height: 100px;
+            }
+
+            .Score b {
+                font-size: 2rem;
+            }
+
+            .Summary {
+                padding: 25px 15px;
+                border-radius: 0;
+            }
+
+            .skill-item {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Large screens */
+        @media (min-width: 1200px) {
+            .Main {
+                max-width: 700px;
+            }
+
+            .Result {
+                padding: 50px 40px;
+            }
+
+            .Summary {
+                padding: 50px 40px;
+            }
+
+            .Score {
+                width: 160px;
+                height: 160px;
+            }
+
+            .Score b {
+                font-size: 3.5rem;
+            }
+        }

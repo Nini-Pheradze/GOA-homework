@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: hsl(210, 46%, 95%);
+    line-height: 1.5;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 24px;
+    grid-template-areas: 
+        "daniel daniel jonathan kira"
+        "jeanette patrick patrick kira";
+}
+
+.testimonial {
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 
+    rgba(72, 85, 106, 0.25) 0px 8px 26px -4px,
+    rgba(72, 85, 106, 0.08) 0px 8px 9px -5px;
+}
+
+.daniel {
+    grid-area: daniel;
+    background: hsl(263, 55%, 52%);
+    background-image: url('data:image/svg+xml,<svg width="104" height="102" xmlns="http://www.w3.org/2000/svg"><path d="M104 102V59.727H84.114c0-5.871.689-11.182 2.068-15.933 1.379-4.75 3.42-9.287 6.125-13.61C95.01 25.86 98.909 22.257 104 19.375V0c-9.758 4.27-18.712 9.874-26.864 16.813-8.152 6.939-15.132 14.906-20.94 23.9-5.808 8.995-10.317 18.618-13.527 28.873C39.659 79.741 38.054 90.298 38.054 102H104Z" fill="%239775fa" fill-rule="evenodd" opacity=".4"/></svg>');
+    background-repeat: no-repeat;
+    background-position: top 0 right 80px;
+    color: white;
+}
+
+.jonathan {
+    grid-area: jonathan;
+    background: hsl(217, 19%, 35%);
+    color: white;
+}
+
+.jeanette {
+    grid-area: jeanette;
+    background: white;
+    color: hsl(219, 29%, 14%);
+}
+
+.patrick {
+    grid-area: patrick;
+    background: hsl(219, 29%, 14%);
+    color: white;
+}
+
+.kira {
+    grid-area: kira;
+    background: white;
+    color: hsl(219, 29%, 14%);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.profile img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 17px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.jeanette .profile img,
+    .kira .profile img {
+        border: 2px solid rgba(117, 117, 117, 0.5);
+    }
+
+.profile-info h4 {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.profile-info .status {
+    font-size: 11px;
+    opacity: 0.5;
+    }
+
+.testimonial h2 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.testimonial p {
+    font-size: 13px;
+    opacity: 0.7;
+    line-height: 1.4;
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+        "daniel daniel"
+        "jonathan kira"
+        "jeanette kira"
+        "patrick patrick";
+        gap: 20px;
+        }
+
+    .testimonial {
+        padding: 24px;
+    }
+
+    .testimonial h2 {
+        font-size: 18px;
+    }
+
+.daniel {
+        background-position: top 0 right 24px;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    body {
+        padding: 16px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: 
+            "daniel"
+            "jonathan"
+            "jeanette"
+            "patrick"
+            "kira";
+        gap: 16px;
+    }
+
+    .testimonial {
+        padding: 20px;
+    }
+
+    .testimonial h2 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .testimonial p {
+        font-size: 12px;
+    }
+
+    .profile {
+        margin-bottom: 14px;
+    }
+
+    .profile img {
+        width: 28px;
+        height: 28px;
+        margin-right: 14px;
+    }
+
+    .profile-info h4 {
+        font-size: 12px;
+    }
+
+    .profile-info .status {
+        font-size: 10px;
+    }
+
+    .daniel {
+        background-position: top 0 right 16px;
+        background-size: 80px 78px;
+    }
+}
+
+/* Extra small mobile */
+@media (max-width: 320px) {
+    body {
+        padding: 12px;
+    }
+
+    .container {
+        gap: 12px;
+    }
+
+    .testimonial {
+        padding: 16px;
+    }
+
+    .testimonial h2 {
+        font-size: 15px;
+    }
+
+    .testimonial p {
+        font-size: 11px;
+    }
+}

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Tracking Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: hsl(226, 43%, 10%);
+            font-family: 'Rubik', sans-serif;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .Main {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr 3fr;
+            align-items: start;
+            min-height: calc(100vh - 40px);
+        }
+
+        .Profile {
+            display: flex;
+            flex-direction: column;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .NameInfo {
+            background-color: hsl(246, 80%, 60%);
+            padding: 30px 25px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .NameInfo::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .InnerName img {
+            width: 70px;
+            height: 70px;
+            border: 3px solid white;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .InnerName h2 {
+            color: white;
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 1.2;
+        }
+
+        .InnerName h2 b {
+            font-weight: 300;
+            font-size: 14px;
+            opacity: 0.8;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .State {
+            background-color: hsl(235, 46%, 20%);
+            padding: 25px;
+        }
+
+        .AllStates {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .AllStates p {
+            color: hsl(235, 45%, 61%);
+            cursor: pointer;
+            transition: color 0.3s ease;
+            font-size: 16px;
+        }
+
+        .AllStates p:hover {
+            color: white;
+        }
+
+        .Active {
+            color: white !important;
+        }
+
+        .Stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .Box {
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            height: 200px;
+        }
+
+        /* Category-specific background colors and icons */
+        .Box:nth-child(1) { background: linear-gradient(135deg, hsl(15, 100%, 70%), hsl(15, 87%, 65%)); }
+        .Box:nth-child(2) { background: linear-gradient(135deg, hsl(195, 74%, 62%), hsl(195, 74%, 57%)); }
+        .Box:nth-child(3) { background: linear-gradient(135deg, hsl(348, 100%, 68%), hsl(348, 100%, 63%)); }
+        .Box:nth-child(4) { background: linear-gradient(135deg, hsl(145, 58%, 55%), hsl(145, 58%, 50%)); }
+        .Box:nth-child(5) { background: linear-gradient(135deg, hsl(264, 64%, 52%), hsl(264, 64%, 47%)); }
+        .Box:nth-child(6) { background: linear-gradient(135deg, hsl(43, 84%, 65%), hsl(43, 84%, 60%)); }
+
+        .Box::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            right: 15px;
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+        }
+
+        .InnerBox {
+            background-color: hsl(235, 46%, 20%);
+            color: white;
+            padding: 25px;
+            margin-top: 40px;
+            height: 160px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: relative;
+        }
+
+        .InnerBox:hover {
+            background-color: hsl(235, 46%, 25%);
+        }
+
+        .InnerBox-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .InnerBox p {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .InnerBox .menu-dots {
+            color: hsl(235, 45%, 61%);
+            cursor: pointer;
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        .InnerBox .menu-dots:hover {
+            color: white;
+        }
+
+        .InnerBox h2 {
+            font-size: 48px;
+            font-weight: 300;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+        .InnerBox b {
+            color: hsl(235, 45%, 61%);
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            .Main {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                max-width: 400px;
+            }
+
+            .Profile {
+                flex-direction: row;
+                height: auto;
+            }
+
+            .NameInfo {
+                flex: 1;
+                padding: 25px 20px;
+                display: flex;
+                align-items: center;
+            }
+
+            .InnerName {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .InnerName img {
+                width: 60px;
+                height: 60px;
+                margin-bottom: 0;
+            }
+
+            .InnerName h2 {
+                font-size: 20px;
+            }
+
+            .InnerName h2 b {
+                font-size: 13px;
+                margin-bottom: 3px;
+            }
+
+            .State {
+                flex: 0 0 120px;
+                padding: 20px 15px;
+                display: flex;
+                align-items: center;
+            }
+
+            .AllStates {
+                flex-direction: row;
+                gap: 20px;
+                width: 100%;
+                justify-content: space-around;
+            }
+
+            .AllStates p {
+                font-size: 15px;
+            }
+
+            .Stats {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .Box {
+                height: 150px;
+            }
+
+            .InnerBox {
+                margin-top: 30px;
+                height: 120px;
+                padding: 20px;
+            }
+
+            .InnerBox h2 {
+                font-size: 32px;
+                margin-bottom: 8px;
+            }
+
+            .InnerBox-header {
+                margin-bottom: 15px;
+            }
+
+            .InnerBox p {
+                font-size: 15px;
+            }
+
+            .InnerBox b {
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .Main {
+                max-width: 100%;
+            }
+
+            .InnerName h2 {
+                font-size: 18px;
+            }
+
+            .InnerBox h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="Main">
+        <div class="Profile">
+            <div class="NameInfo">
+                <div class="InnerName">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAiIGhlaWdodD0iNzAiIHZpZXdCb3g9IjAgMCA3MCA3MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzUiIGN5PSIzNSIgcj0iMzUiIGZpbGw9IiNGRkY5RkMiLz4KPGNpcmNsZSBjeD0iMzUiIGN5PSIyOCIgcj0iMTIiIGZpbGw9IiM2Njk5RkYiLz4KPHBhdGggZD0iTTUwIDU1QzUwIDQ3LjI2ODQgNDMuNzMxNiA0MSAzNSA0MUMyNi4yNjg0IDQxIDIwIDQ3LjI2ODQgMjAgNTVIMjBWNjBIMjBIMzVINTBINTBWNTVaIiBmaWxsPSIjNjY5OUZGIi8+Cjwvc3ZnPgo=" alt="Jeremy Robson">
+                    <div>
+                        <h2><b>Report for</b><br>Jeremy Robson</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="State">
+                <div class="AllStates">
+                    <p>Daily</p>
+                    <p class="Active">Weekly</p>
+                    <p>Monthly</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="Stats">
+            <div class="Box">
+                <div class="InnerBox">
+                    <div class="InnerBox-header">
+                        <p>Work</p>
+                        <span class="menu-dots">⋯</span>
+                    </div>
+                    <div>
+                        <h2>32hrs</h2>
+                        <b>Last Week - 36hrs</b>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="Box">
+                <div class="InnerBox">
+                    <div class="InnerBox-header">
+                        <p>Play</p>
+                        <span class="menu-dots">⋯</span>
+                    </div>
+                    <div>
+                        <h2>10hrs</h2>
+                        <b>Last Week - 8hrs</b>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="Box">
+                <div class="InnerBox">
+                    <div class="InnerBox-header">
+                        <p>Study</p>
+                        <span class="menu-dots">⋯</span>
+                    </div>
+                    <div>
+                        <h2>4hrs</h2>
+                        <b>Last Week - 7hrs</b>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="Box">
+                <div class="InnerBox">
+                    <div class="InnerBox-header">
+                        <p>Exercise</p>
+                        <span class="menu-dots">⋯</span>
+                    </div>
+                    <div>
+                        <h2>4hrs</h2>
+                        <b>Last Week - 5hrs</b>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="Box">
+                <div class="InnerBox">
+                    <div class="InnerBox-header">
+                        <p>Social</p>
+                        <span class="menu-dots">⋯</span>
+                    </div>
+                    <div>
+                        <h2>5hrs</h2>
+                        <b>Last Week - 10hrs</b>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="Box">
+                <div class="InnerBox">
+                    <div class="InnerBox-header">
+                        <p>Self Care</p>
+                        <span class="menu-dots">⋯</span>
+                    </div>
+                    <div>
+                        <h2>2hrs</h2>
+                        <b>Last Week - 2hrs</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

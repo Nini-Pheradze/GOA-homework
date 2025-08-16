@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "League Spartan", sans-serif;
+    background-color: #f7f2f7;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.Main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.Top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.TopLeft {
+    padding-right: 20px;
+}
+
+.LoveProducts {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: hsl(300, 43%, 22%);
+    line-height: 0.8;
+    margin-bottom: 20px;
+}
+
+.ExtraInfo {
+    font-size: 1.1rem;
+    color: hsl(303, 10%, 53%);
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.TopRight {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.Review {
+    display: flex;
+    align-items: center;
+    background-color: hsl(300, 24%, 96%);
+    padding: 16px 32px;
+    border-radius: 8px;
+    gap: 24px;
+    font-weight: 700;
+    color: hsl(300, 43%, 22%);
+}
+
+.Review:nth-child(1) {
+    transform: translateX(-40px);
+}
+
+.Review:nth-child(2) {
+    transform: translateX(-20px);
+}
+
+.Review:nth-child(3) {
+    transform: translateX(0);
+}
+
+.stars {
+    display: flex;
+    gap: 4px;
+}
+
+.star {
+    width: 16px;
+    height: 16px;
+    background-color: #FFD700;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.Bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: hsl(300, 43%, 22%);
+    padding: 40px 32px 32px;
+    border-radius: 8px;
+    color: white;
+}
+
+.Irene {
+    transform: translateY(16px);
+}
+
+.Anne {
+    transform: translateY(32px);
+}
+
+.CardTop {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.CardTop img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.buyer-info h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.buyer-info .status {
+    color: hsl(333, 80%, 67%);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.estimonial-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    .Top {
+        gap: 60px;
+    }
+
+    .LoveProducts {
+        font-size: 3rem;
+    }
+
+    .Review:nth-child(1) {
+        transform: translateX(-20px);
+    }
+
+    .Review:nth-child(2) {
+        transform: translateX(-10px);
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .Main {
+        padding: 30px 15px;
+    }
+
+    .Top {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .TopLeft {
+        padding-right: 0;
+    }
+
+    .LoveProducts {
+        font-size: 2.5rem;
+        margin-bottom: 16px;
+    }
+
+    .ExtraInfo {
+        font-size: 1rem;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .TopRight {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .Review {
+        flex-direction: column;
+        text-align: center;
+        padding: 16px;
+        gap: 12px;
+        transform: none !important;
+    }
+
+    .Bottom {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .testimonial-card {
+        transform: none !important;
+        padding: 32px 24px;
+    }
+
+    .CardTop {
+        margin-bottom: 20px;
+    }
+
+    .testimonial-text {
+        font-size: 0.95rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .Main {
+        padding: 20px 10px;
+    }
+
+    .LoveProducts {
+        font-size: 2rem;
+    }
+
+    .ExtraInfo {
+        font-size: 0.9rem;
+    }
+
+    .Review {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    .testimonial-card {
+        padding: 24px 20px;
+    }
+
+    .testimonial-text {
+        font-size: 0.9rem;
+    }
+}
