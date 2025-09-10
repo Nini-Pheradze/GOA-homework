@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(226, 43%, 10%);
+    font-family: 'Rubik', sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.Main {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 300px 1fr;
+    align-items: start;
+    min-height: calc(100vh - 40px);
+}
+
+.Profile {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    overflow: hidden;
+    height: fit-content;
+}
+
+.NameInfo {
+    background-color: hsl(246, 80%, 60%);
+    padding: 30px 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.NameInfo::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.InnerName img {
+    width: 70px;
+    height: 70px;
+    border: 3px solid white;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.InnerName h2 {
+    color: white;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.InnerName h2 b {
+    font-weight: 300;
+    font-size: 14px;
+    opacity: 0.8;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.State {
+    background-color: hsl(235, 46%, 20%);
+    padding: 25px;
+}
+
+.AllStates {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.AllStates p {
+    color: hsl(235, 45%, 61%);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-size: 16px;
+}
+
+.AllStates p:hover {
+    color: white;
+}
+
+.Active {
+    color: white !important;
+}
+
+.Stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.Box {
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    height: 200px;
+    min-width: 0;
+}
+
+/* Category-specific background colors */
+.Box:nth-child(1) { background: linear-gradient(135deg, hsl(15, 100%, 70%), hsl(15, 87%, 65%)); }
+.Box:nth-child(2) { background: linear-gradient(135deg, hsl(195, 74%, 62%), hsl(195, 74%, 57%)); }
+.Box:nth-child(3) { background: linear-gradient(135deg, hsl(348, 100%, 68%), hsl(348, 100%, 63%)); }
+.Box:nth-child(4) { background: linear-gradient(135deg, hsl(145, 58%, 55%), hsl(145, 58%, 50%)); }
+.Box:nth-child(5) { background: linear-gradient(135deg, hsl(264, 64%, 52%), hsl(264, 64%, 47%)); }
+.Box:nth-child(6) { background: linear-gradient(135deg, hsl(43, 84%, 65%), hsl(43, 84%, 60%)); }
+
+.Box::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+}
+
+.InnerBox {
+    background-color: hsl(235, 46%, 20%);
+    color: white;
+    padding: 25px;
+    margin-top: 40px;
+    height: 160px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.InnerBox:hover {
+    background-color: hsl(235, 46%, 25%);
+}
+
+.InnerBox-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.InnerBox p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.InnerBox .menu-dots {
+    color: hsl(235, 45%, 61%);
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.InnerBox .menu-dots:hover {
+    color: white;
+}
+
+.InnerBox h2 {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 300;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.InnerBox b {
+    color: hsl(235, 45%, 61%);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    .Main {
+        grid-template-columns: 250px 1fr;
+        gap: 15px;
+    }
+
+    .Stats {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 15px;
+    }
+
+    .NameInfo {
+        padding: 25px 20px;
+    }
+
+    .InnerName h2 {
+        font-size: 20px;
+    }
+}
+
+/* Mobile Landscape and Small Tablet */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .Main {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 100%;
+    }
+
+    .Profile {
+        order: -1;
+    }
+
+    .NameInfo {
+        padding: 25px 20px;
+    }
+
+    .InnerName {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        text-align: left;
+    }
+
+    .InnerName img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .InnerName h2 {
+        font-size: 20px;
+    }
+
+    .InnerName h2 b {
+        font-size: 13px;
+        margin-bottom: 3px;
+    }
+
+    .State {
+        padding: 20px;
+    }
+
+    .AllStates {
+        flex-direction: row;
+        gap: 25px;
+        justify-content: center;
+    }
+
+    .AllStates p {
+        font-size: 16px;
+        padding: 5px 10px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .AllStates p.Active {
+        background-color: hsl(246, 80%, 60%);
+    }
+
+    .Stats {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .Box {
+        height: 180px;
+    }
+
+    .InnerBox {
+        margin-top: 35px;
+        height: 145px;
+        padding: 22px;
+    }
+
+    .InnerBox h2 {
+        font-size: clamp(28px, 8vw, 40px);
+        margin-bottom: 8px;
+    }
+
+    .InnerBox-header {
+        margin-bottom: 18px;
+    }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .Main {
+        gap: 15px;
+    }
+
+    .Profile {
+        flex-direction: column;
+    }
+
+    .NameInfo {
+        padding: 20px 15px;
+        text-align: center;
+    }
+
+    .InnerName {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .InnerName img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .InnerName h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .State {
+        padding: 15px;
+    }
+
+    .AllStates {
+        gap: 20px;
+    }
+
+    .AllStates p {
+        font-size: 15px;
+        padding: 8px 12px;
+    }
+
+    .Stats {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .Box {
+        height: 160px;
+    }
+
+    .InnerBox {
+        margin-top: 30px;
+        height: 130px;
+        padding: 20px;
+    }
+
+    .InnerBox h2 {
+        font-size: clamp(24px, 10vw, 36px);
+        margin-bottom: 8px;
+    }
+
+    .InnerBox p {
+        font-size: 15px;
+    }
+
+    .InnerBox b {
+        font-size: 13px;
+    }
+
+    .InnerBox-header {
+        margin-bottom: 15px;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 360px) {
+    body {
+        padding: 8px;
+    }
+
+    .InnerName h2 {
+        font-size: 16px;
+    }
+
+    .InnerName h2 b {
+        font-size: 12px;
+    }
+
+    .AllStates p {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .Box {
+        height: 150px;
+    }
+
+    .InnerBox {
+        height: 120px;
+        padding: 18px;
+    }
+
+    .InnerBox h2 {
+        font-size: clamp(20px, 12vw, 32px);
+    }
+
+    .InnerBox p {
+        font-size: 14px;
+    }
+
+    .InnerBox b {
+        font-size: 12px;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+    .Main {
+        grid-template-columns: 350px 1fr;
+        gap: 30px;
+    }
+
+    .Stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .Box {
+        height: 220px;
+    }
+
+    .InnerBox {
+        height: 180px;
+        padding: 30px;
+    }
+
+.InnerBox h2 {
+    font-size: 52px;
+    }
+}
