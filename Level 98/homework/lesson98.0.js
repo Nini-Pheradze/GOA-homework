@@ -1,6 +1,6 @@
 // Use ls to show files in the current directory with details (permissions, owner, size, etc.).✅
 
-// Directory: C:\Users\user\OneDrive\Desktop\GOA HOMEWORK\Level 98\homework
+// Directory: C:\Users\user\OneDrive\Desktop\GOA HOMEWORK\Level 98\homework✅
 
 
 
@@ -14,7 +14,6 @@
 
 
 
-
 // Run the basic clear command to wipe the terminal. ✅
 
 // Instead of typing clear, press Ctrl+L to achieve the same effect.✅
@@ -25,12 +24,12 @@
 
 // Use cd .. to move one level up in the directory tree.✅
 
-// Create a file app.js with a simple console.log("Hello Node"); and run it with node command.
+// Create a file app.js with a simple console.log("Hello Node"); and run it with node command.✅
 
 console.log("Hello Node");
 
 // Use the command to display the installed Node.js version.✅
 
-// Make a directory named projects using cmd command.
+// Make a directory named projects using cmd command.✅
 
-// Create a file test.txt and then delete it using cmd command.
+// Create a file test.txt and then delete it using cmd command.✅
