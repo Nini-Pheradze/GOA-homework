@@ -32,6 +32,15 @@ btn1.addEventListener("click", () => {
 
 // შექმენით ინტერვალი, რომელიც 1 წუთის განმავლობაში, ტერმინალში ყოველ წამს გამოიტანს ახლანდელ დროს შემდეგ ფორმატში: "წელი-თვე-დღე, საათი-წუთი-წამი"
 
-const interval = setInterval(() => {
-    
-})
+let counter = 0;
+
+let myInterval = setInterval(() => {
+    counter++;
+
+    const cd = new Date();
+    console.log(`${cd.getFullYear()}-${cd.getMonth() + 1}-${cd.getDate()}, ${cd.getHours()}-${cd.getMinutes()}-${cd.getSeconds()}`);
+
+    if (counter === 60) {
+        clearInterval(myInterval);
+    }
+}, 1000);
