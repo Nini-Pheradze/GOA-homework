@@ -11,7 +11,7 @@ const str = ["Hello world!", "Welcome", "Programming", "Web Development", "Data 
 button.addEventListener("click", () => {
     const randomIndex = Math.floor(Math.random() * str.length);
     par.textContent = str[randomIndex];
-    });
+});
 
 
 

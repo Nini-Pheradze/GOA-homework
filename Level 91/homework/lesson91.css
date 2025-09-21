@@ -1,20 +1,74 @@
 body{
-    display: grid;
+    display: flex;
     padding-left: 80px;
+    background-color: hwb(0 95% 5% / 0.863);
 }
 
-.whole-page{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+h1 {
+    position: relative;
+    top: 0;
+    left: 50%; 
+    transform: translateX(-50%);
+    align-items: flex-start;
 }
+
+.desserts {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 30px;
+    margin-top: 80px;
+}
+
+.your-cart{
+    background-color: white;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    margin-right: 40px;
+    margin-top: 30px;
+}
+
 
 img {
     width: 200px;
     height: 200px;
+    border: 5%;
 }
 
+.whole-page p{
+    color: #ff9100;
+    font-size: 18px;
+}
 
+.whole-page{
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+}
 
+.whole-page h4{
+    color: gray;
+}
 
-
+.icon-add-to-cart{
+    display: inline-flex;
+    border: 2px solid hwb(0 31% 67% / 0.818);
+    border-radius: 30px;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    background-color: hsl(30, 9%, 96%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 35px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
