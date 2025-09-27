@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Bitcount+Single+Ink:wght@100..900&family=Farro:wght@300;400;500;700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rye&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair Display";
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(red, green, #11117d);
+    color: white;
+}
+
+#form-section{
+    width: 100%;
+}
+
+#form-section form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-section form input {
+    font-size: 20px;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#form-main button {
+    font-size: 30px;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#info-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
