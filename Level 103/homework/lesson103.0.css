@@ -1,0 +1,23 @@
+/* CSS */
+#cube{
+    border: 2px solid black;
+    border-radius: 24px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    animation: jump 1s infinite;
+}
+@keyframes jump {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
