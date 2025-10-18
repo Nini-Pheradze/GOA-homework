@@ -49,7 +49,7 @@ async function fetchWithRetry(url, retries = 3) {
             return data;
 
         } catch (error) {
-            console.log(`❌ Attempt ${i} failed: ${error.message}`);
+            console.log(`Attempt ${i} failed: ${error.message}`);
 
             if (i === retries) {
                 console.log("⚠️ All retry attempts failed. Please try again later.");

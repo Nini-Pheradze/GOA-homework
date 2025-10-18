@@ -48,4 +48,3 @@ while (sum < 100) {
     console.log("Added " + num + ", total sum: " + sum);
     num++;
 };
-
