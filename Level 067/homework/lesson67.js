@@ -1,6 +1,6 @@
 // Create an empty object.
 let object = {
-
+    
 };
 
 console.log(object);

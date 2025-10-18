@@ -40,7 +40,6 @@ for r in user :
     print(r)
 
 
-
 # მომხმარებლის რიცხვები:
 num1, num2, num3 =int(input("Enter number1: ")), int(input("Enter number2: ")), int(input("Enter number3: "))
 print(num1)

@@ -13,6 +13,4 @@ function userName(e){
 
 // On a button click, clear the value of the input with name="email".
 
-
-
 // On a button click, alert the value of the input with name="phone".

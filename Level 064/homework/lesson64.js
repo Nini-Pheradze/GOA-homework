@@ -30,6 +30,8 @@ function favouriteEmoji() {
     alert("Thank you! Your favourite emoji - ", emoji);
 }
 
+favouriteEmoji()
+
 // Prompt the user to enter a word and use document.title to set the page’s title to that word.
 function pageTitle() {
     let word = prompt("Enter a word to set as the page title:");

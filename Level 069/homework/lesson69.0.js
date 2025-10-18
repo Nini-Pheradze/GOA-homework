@@ -122,27 +122,3 @@ if (number % 3 === 0 && number % 5 === 0) {
 } else {
     console.log("Not divisible by either 3 or 5");
 }
-
-// Print numbers from 1 to 5.
-
-// Use a while loop to print numbers from 1 to 5, each on a new line.
-
-
-// Print even numbers from 2 to 10.
-
-// Use a while loop to print even numbers starting from 2 up to 10.
-
-
-// Print numbers from 10 down to 1.
-
-// Use a while loop to print numbers in reverse from 10 down to 1.
-
-
-// Print all even numbers between 1 and 20.
-
-// Use a for loop to check and print even numbers from 1 to 20.
-
-
-// Print the sum of numbers from 1 to 5.
-
-// Use a for loop to add numbers from 1 to 5 and print the final sum.
