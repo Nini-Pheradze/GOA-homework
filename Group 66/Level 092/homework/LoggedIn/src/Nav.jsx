@@ -1,0 +1,14 @@
+import User from './User'
+
+function Nav({ isLoggedIn }) {
+    return (
+        <>
+            {/* 3) მთავარ ფაილში შექმენით ცვლადი სახელად isLoggedIn რომელშიც შეინახავთ Boolean მნიშვნელობას ან true ან false ეს ცვლადი გადაეცით Header კომპონენტს props - ად, Header კომპონენტში გამოიძახეთ Nav კომპონენტი და გადაეცით მოცემული props, Nav კომპონენტში გამოიძახეთ User კომპონენტი და გადაეცით მოცემული isLoggedIn props, User - კომპონენტში შეამოწმეთ თუ isLoggedIn მნიშვნელობა უდრის true - ს მაშინ დააბრუნეთ message - Hello User, სხვა შემთხვევაში კი 'Please log in to your account', შეგიძლიათ User კომპონენტში გამოიყენოთ style ატრიბუტი და გასტილოთ მოცემული ტექტსები */}
+            <nav>
+                <User isLoggedIn={isLoggedIn} />
+            </nav>
+        </>
+    );
+}
+
+export default Nav

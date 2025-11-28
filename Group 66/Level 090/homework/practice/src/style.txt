@@ -1,0 +1,99 @@
+    React ელემენტების გასტილვა
+
+        // React ელემენტეის გასტილვა შეიძლება inline styles-ით
+        // React-ში სტილები იწერება JS ობიექტის სახით.
+        // CSS-ის property სახელები camelCase-ში უნდა იყოს:
+        // function InlineExample() {
+        //   const boxStyle = {
+        //     backgroundColor: "lightblue",
+        //     padding: "20px",
+        //     borderRadius: "10px",
+        //     color: "#333",
+        //     textAlign: "center"
+        //   };
+
+        //   return <div style={boxStyle}>Inline Style Example</div>;
+        // }
+
+        // CSS File (გარე CSS ფაილი)
+
+        // მარტივი და ყველაზე გამოყენებადი გზა. 
+
+        // .title {
+        //   color: red;
+        //   font-size: 24px;
+        //   font-weight: bold;
+        // }
+
+        // import "./App.css";
+
+        // function CssFileExample() {
+        //   return <h1 className="title">CSS File Example</h1>;
+        // }
+
+
+        // CSS Modules (ლოკალური სტილები)
+
+        // .btn {
+        //   background: green;
+        //   color: white;
+        //   padding: 10px 20px;
+        //   border-radius: 8px;
+        // }
+
+        // import styles from "./Button.module.css";
+
+        // export default function Button() {
+        //   return <button className={styles.btn}>Click</button>;
+        // }
+
+        // Styled Components (CSS in JS)
+
+        // თუ პროექტში დაყენებულია styled-components:
+
+        // npm install styled-components
+
+        // import styled from "styled-components";
+
+        // const Box = styled.div`
+        //   background: purple;
+        //   padding: 20px;
+        //   border-radius: 12px;
+        //   color: white;
+        // `;
+
+        // export default function StyledExample() {
+        //   return <Box>Styled Component Example</Box>;
+        // }
+
+
+
+        // Tailwind CSS
+
+        // Utility-based styling. (თუ Tailwind დაყენებულია)
+
+        // function TailwindExample() {
+        //   return (
+        //     <div className="bg-blue-500 text-white p-4 rounded-xl text-center">
+        //       Tailwind Example
+        //     </div>
+        //   );
+        // }
+
+        // Dynamic Styles (სტილები props-ებზე დაყრდნობით)
+
+        // შეგიძლია props-ის მიხედვით გაუკეთო დინამიური სტილი:
+
+        // function DynamicBox({ active }) {
+        //   return (
+        //     <div
+        //       style={{
+        //         backgroundColor: active ? "green" : "gray",
+        //         padding: "20px",
+        //         color: "white",
+        //       }}
+        //     >
+        //       {active ? "Active" : "Inactive"}
+        //     </div>
+        //   );
+        // }
