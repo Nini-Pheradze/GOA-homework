@@ -1,10 +1,7 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
 import App from './App.jsx'
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+const element = <h3>I am being rendered!</h3>
+
+createRoot(document.getElementById('root')).render(<App />);
+ReactDOM.render(element, document.getElementById('root'))

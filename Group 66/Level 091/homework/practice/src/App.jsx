@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Maintain from "./maintain";
+import Exersize from "./exersize";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {/* შექმენით მთავარი კომპონენტი, გასტილეთ ის external css - ის გამოყენებით, მოიძეთ ინფორმაცია თუ როგორ ხდება React - ში external css - ის გამოყენება, შეგიძლიათ დაყოთ პატარ-პატარა კომპონენტებად და საბოლოოდ გამოიძახოთ ისინი App კომპონენტში */}
+
+      <Maintain />
+
+      {/* მოკლედ (2–3 წინადადებით) დაწერე, რატომ შეიძლება აირჩიო React ჩვეულ ე.წ. “vanilla JS”-ზე მუშაობის ნაცვლად.
+      React.js არის JavaScript ბიბლიოთეკა, რომელიც შემუშავებულია Facebook-ის ინჟინრების მიერ. აქ მოცემულია მხოლოდ რამდენიმე მიზეზი, რის გამოც ადამიანები ირჩევენ React-ით პროგრამირებას:
+
+      React სწრაფია. React-ში შექმნილ აპლიკაციებს შეუძლიათ რთული განახლებების დამუშავება და ამავდროულად სწრაფი და რეაგირებადი.
+      React მოდულურია. კოდის დიდი, მკვრივი ფაილების დაწერის ნაცვლად, შეგიძლიათ დაწეროთ მრავალი პატარა, მრავალჯერადი ფაილი.
+      React მასშტაბირებადია. დიდი პროგრამები, რომლებიც აჩვენებენ უამრავ ცვალებად მონაცემს, არის ის, სადაც React საუკეთესოდ მუშაობს.
+      React მოქნილია. თქვენ შეგიძლიათ გამოიყენოთ React საინტერესო პროექტებისთვის, რომლებსაც არაფერი აქვთ საერთო ვებ აპლიკაციის შექმნასთან. ხალხი ჯერ კიდევ იკვლევს React-ის პოტენციალს.
+      React პოპულარულია. მიუხედავად იმისა, რომ ამ მიზეზს, რა თქმა უნდა, არაფერი აქვს საერთო React-ის ხარისხთან, სიმართლე ისაა, რომ React-ის გაგება უფრო მოთხოვნადს გაგხდით.
+      თუ React-ში ახალი ხართ, მაშინ ეს კურსი თქვენთვისაა - React-ის წინასწარი ცოდნა არ არის მოსალოდნელი. თავიდანვე დავიწყებთ და ნელ-ნელა ვიმუშავებთ. ბოლოს თქვენ მზად იქნებით React-ში პროგრამირებისთვის და რეალურად გეცოდინებათ, თუ რას აკეთებთ.
+      */}
+      <Exersize />
     </>
   )
 }
 
-export default App
+export default App;
