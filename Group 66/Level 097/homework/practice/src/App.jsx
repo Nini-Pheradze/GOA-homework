@@ -3,6 +3,19 @@ import { useEffect, useState } from "react"
 const App = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
+  const [price, setPrice] = useState([]);
+  const promocodes = [
+    { code: 'Discount10', discount: 0.1 },
+    { code: 'Discount20', discount: 0.2 },
+    { code: 'Discount50', discount: 0.5 },
+    { code: 'FREE', discount: 1 },
+  ];
+
+
+  useEffect(() => {
+    const sum = cart.reduce((prev, cur) => prev + cur.unit * cur.price, 0);
+    setPrice(sum.toFixed(2));
+  }, [cart]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -93,7 +106,23 @@ const App = () => {
           }
         </ul>
       </section>
-      
+
+      <section>
+        <h2>Cart</h2>
+        <p>Price: {price}</p>
+      </section>
+
+      <section>
+        <h2>Checkout</h2>
+        <p>Current Time: {price}</p>
+        <p>Discounted price: </p>
+
+
+        <form>
+          <input type="text" placeholder="Promocode" required />
+          <button disabled={cart.length == 0 ? true : false}>Submit</button>
+        </form>
+      </section>
     </main>
   )
 }
