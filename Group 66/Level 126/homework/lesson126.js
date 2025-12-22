@@ -20,3 +20,57 @@ function indexEqualsValue(arr) {
 
     return result;
 }
+
+
+
+// Grouped by commas
+
+function groupByCommas(n) {
+    return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+
+
+// Simple frequency sort
+
+function solve(arr) {
+    const freq = {};
+
+
+    for (const num of arr) {
+        freq[num] = (freq[num] || 0) + 1;
+    }
+
+
+    return arr.sort((a, b) => {
+        if (freq[b] !== freq[a]) {
+        return freq[b] - freq[a];
+        }
+        return a - b; 
+    });
+};
+
+
+
+
+// Replace With Alphabet Position
+
+function alphabetPosition(text) {
+    return text
+        .toLowerCase()
+        .split('')
+        .filter(ch => ch >= 'a' && ch <= 'z')
+        .map(ch => ch.charCodeAt(0) - 96)
+        .join(' ');
+}
+
+
+
+// Palindrome for your Dome
+
+function palindrome(string) {
+    const cleaned = string
+        .toLowerCase()
+        .replace(/[^a-z0-9]/g, '');
+
+    return cleaned === cleaned.split('').reverse().join('');
+}
