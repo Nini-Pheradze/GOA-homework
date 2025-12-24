@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "brand": "BMW",
+        "model": "X5",
+        "year": 2023,
+        "color": "შავი",
+        "price": 85000,
+        "engine": "3.0L"
+    },
+    {
+        "id": 2,
+        "brand": "Mercedes",
+        "model": "E-Class",
+        "year": 2022,
+        "color": "ვერცხლისფერი",
+        "price": 75000,
+        "engine": "2.0L"
+    },
+    {
+        "id": 3,
+        "brand": "Toyota",
+        "model": "Camry",
+        "year": 2023,
+        "color": "თეთრი",
+        "price": 35000,
+        "engine": "2.5L"
+    },
+    {
+        "id": 4,
+        "brand": "Audi",
+        "model": "Q7",
+        "year": 2024,
+        "color": "ლურჯი",
+        "price": 95000,
+        "engine": "3.0L"
+    },
+        {
+        "id": 5,
+        "brand": "Honda",
+        "model": "Accord",
+        "year": 2023,
+        "color": "წითელი",
+        "price": 32000,
+        "engine": "1.5L"
+        }
+]
