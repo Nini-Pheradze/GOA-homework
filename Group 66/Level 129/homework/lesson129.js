@@ -19,7 +19,7 @@ app.get('/users/:id', (req, res) => {
         return res.status(404).send("მომხმარებელი ვერ მოიძებნა");
     }
     if (!favFilm) {
-        return res.status(400).send("გთხოვთ, მიუთითოთ ფილმის სახელი (?favouriteFilm=...)");
+        return res.status(400).send("გთხოვთ, მიუთითოთ ფილმის სახელი");
     }
     res.send(`user ${userId}'s favourite film to watch is ${favFilm}`);
 });
