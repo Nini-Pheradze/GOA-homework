@@ -52,14 +52,10 @@ function saveUsers(users) {
     const { pathname, query } = parsedUrl;
 
     res.setHeader('Content-Type', 'application/json');
-
-    // 🗑 DELETE USER (ONLY ADMIN)
     if (pathname === '/delete-user' && req.method === 'DELETE') {
         const { adminEmail, adminPassword, id } = query;
 
         const users = getUsers();
-
-        // 🔐 admin-ის შემოწმება
         const admin = users.find(
         u =>
             u.email === adminEmail &&
@@ -73,7 +69,6 @@ function saveUsers(users) {
         return;
         }
 
-        // 👤 მომხმარებლის მოძებნა id-ით
         const userIndex = users.findIndex(u => u.id === Number(id));
 
         if (userIndex === -1) {
@@ -82,7 +77,6 @@ function saveUsers(users) {
         return;
         }
 
-        // ❌ წაშლა
         const deletedUser = users.splice(userIndex, 1);
         saveUsers(users);
 
