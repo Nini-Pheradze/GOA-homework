@@ -87,30 +87,30 @@ app.listen(3000, () => {
 // BONUS
 // 6) მოუსმინეთ PATCH - მოთხოვნას 'animals/:id' მოცემულ ბილკზე რომელიც კონკრეტული ცხოველის ობიექტის კუთვნილებებს განაახლებს
 
-// app.patch('/animals/:id', (req, res) => {
-//     const { id } = req.params;
-//     const { name, age } = req.body;
+app.patch('/animals/:id', (req, res) => {
+    const { id } = req.params;
+    const { name, age } = req.body;
 
-//     const animalIndex = animals.findIndex((a) => a.id === Number(id));
+    const animalIndex = animals.findIndex((a) => a.id === Number(id));
 
-//     if (animalIndex === -1) {
-//         return res.status(404).json({ message: "ცხოველი ვერ მოიძებნა" });
-//     }
+    if (animalIndex === -1) {
+        return res.status(404).json({ message: "ცხოველი ვერ მოიძებნა" });
+    }
 
-//     const updatedAnimal = { 
-//         ...animals[animalIndex], 
-//         ...(name && { name }), 
-//         ...(age && { age }) 
-//     };
+    const updatedAnimal = { 
+        ...animals[animalIndex], 
+        ...(name && { name }), 
+        ...(age && { age }) 
+    };
 
-//     animals[animalIndex] = updatedAnimal;
+    animals[animalIndex] = updatedAnimal;
 
-//     res.status(200).json({
-//         message: "მონაცემები წარმატებით განახლდა",
-//         animal: updatedAnimal
-//     });
-// });
+    res.status(200).json({
+        message: "მონაცემები წარმატებით განახლდა",
+        animal: updatedAnimal
+    });
+});
 
-// app.listen(3000, () => {
-//     console.log('Server is running on port 3000');
-// });
+app.listen(3000, () => {
+    console.log('Server is running on port 3000');
+});
