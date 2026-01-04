@@ -8,4 +8,4 @@ fs.readFile('cars.js', 'utf8', (err, data) => {
 
     const cars = JSON.parse(data);
     console.log(cars);
-})
+});
