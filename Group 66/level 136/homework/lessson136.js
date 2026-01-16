@@ -39,7 +39,7 @@ module.exports = { readUsers, writeUsers };
 
     const users = readUsers();
 
-    // email-ის უნიკალურობის შემოწმება
+// for email
     const exists = users.find((u) => u.email === email);
     if (exists) {
         return res.status(409).json({
