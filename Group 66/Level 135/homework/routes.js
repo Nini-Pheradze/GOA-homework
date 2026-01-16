@@ -17,13 +17,13 @@ const {
 const bodyChecker = require("../middlewares/bodyChecker");
 const logger = require("../middlewares/logger");
 
-// ყველა ტელეფონი
+// all phones
 router.get("/", logger, getPhones);
 
 // ტელეფონი id-ით
 router.get("/:id", logger, getPhoneById);
 
-// ახალი ტელეფონი (body checker middleware)
+// ახალი ტელეფონი
 router.post("/", logger, bodyChecker, addPhone);
 
 // განახლება

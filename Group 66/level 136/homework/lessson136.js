@@ -1,33 +1,24 @@
-/*
-    Utility ფუნქციები ფაილთან სამუშაოდ
-    კითხულობს და წერს users.json ფაილში
-    */
+/* Utility ფუნქციები ფაილთან სამუშაოდ კითხულობს და წერს users.json ფაილში */
 
-    const fs = require("fs");
-    const path = require("path");
+const fs = require("fs");
+const path = require("path");
 
-    const filePath = path.join(__dirname, "../database/users.json");
+const filePath = path.join(__dirname, "../database/users.json");
 
-    const readUsers = () => {
+const readUsers = () => {
     const data = fs.readFileSync(filePath, "utf-8");
     return JSON.parse(data);
-    };
+};
 
-    const writeUsers = (users) => {
+const writeUsers = (users) => {
     fs.writeFileSync(filePath, JSON.stringify(users, null, 2));
 };
 
 module.exports = { readUsers, writeUsers };
 
+const { readUsers, writeUsers } = require("../utils/fileHandler");
 
-/*
-    Auth Controller
-    აქ ვწერთ რეგისტრაციის ლოგიკას
-    */
-
-    const { readUsers, writeUsers } = require("../utils/fileHandler");
-
-    const register = (req, res) => {
+const register = (req, res) => {
     const { username, email, password } = req.body;
 
     // მონაცემების შემოწმება
@@ -35,7 +26,7 @@ module.exports = { readUsers, writeUsers };
         return res.status(400).json({
         message: "All fields are required"
         });
-    }
+}
 
     const users = readUsers();
 
