@@ -7,7 +7,7 @@ process.stdout.write("Enter a word: ");
 let appendText = (data) => {
     let input = data.toString().trim();
 
-        const wrongName = 'te!!.txt';
+        const wrongName = 'te.txt';
 
         try{
             fs.writeFileSync(wrongName, input);

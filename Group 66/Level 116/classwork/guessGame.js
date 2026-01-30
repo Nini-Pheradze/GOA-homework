@@ -12,4 +12,4 @@ process.stdin.on('data', (userInput) => {
     } else {
         console.log('Incorrect number, try again.');
     }
-})
+});
