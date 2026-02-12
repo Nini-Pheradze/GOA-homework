@@ -34,7 +34,6 @@ const server = http.createServer((req, res) => {
         case 'POST':
         handlePostRequest(req, res);
         break;
-        
         case 'DELETE':
         handleDeleteRequest(req, res);
         break;

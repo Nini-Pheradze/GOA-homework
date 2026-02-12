@@ -18,7 +18,7 @@ const server = http.createServer((req, res) => {
         }
 
         const result = (num % 2 === 0) ? 'even' : 'odd';
-        
+
         res.writeHead(200, { 'Content-Type': 'text/plain' });
         res.end(`Your number is ${result}`);
     } else {

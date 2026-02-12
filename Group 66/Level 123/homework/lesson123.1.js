@@ -1,67 +1,38 @@
-const express = require('express');
+// 2) შექმენით cars.json - სადაც გექნებათ მოცემული მანქანების ინფორმაცია, თითოეულს უნდა ჰქონდეს თავისი id, იმ შემთხვევაში თუ მომხმარებლის მიერ შემოტანილი ბილიკი === '/' მაშინ დააბრუნეთ მთლიანი cars.json ინფორმაცია, იმ შემთხვევაში თუ მომხმარებელს შემოიტანა ბილიკი 'cars/car?id={carId}' მაშნ მომხმარებელს json ფორმატში გამუტანეთ ამ id - ის მიხედვით მანქანის ინფორმაცია, იმ შმთხვევაში თუ მომხმარებელმა query - სახით შემოიტანა ისეთი მანქანის id რომელიც არ არსებობს დაუბრუნეთ error
+
+const http = require('http');
+const url = require('url');
 const fs = require('fs');
-const path = require('path');
+const { json } = require('stream/consumers');
 
-const app = express();
-const PORT = 3000;
+const server = http.createServer((req, res) => {
+    const parsedURL = url.parse(req.url, true); // 
+    const path = parsedURL.pathname;
+    const query = parsedURL.query;
 
-const getCarsData = () => {
-    try {
-        const data = fs.readFileSync(path.join(__dirname, 'cars.json'), 'utf8');
-        return JSON.parse(data);
-    } catch (error) {
-        console.error('შეცდომა ფაილის წაკითხვისას:', error);
-        return [];
+    const carsData = JSON.parse(fs.readFileSync('./cars.json', 'utf-8'));
+
+    if (path === '/' && req.method === 'GET') {
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify(carsData));
+    } else if (path === '/cars/car' && req.method === 'GET') {
+            const carID = parseInt(query.id);
+
+            const foundCars = carsData.find(car => car.id === carID);
+
+            if (foundCars) {
+                res.writeHead(200, {'Content-Type': 'application/json'});
+                res.end(JSON.stringify(foundCars));
+            } else {
+                res.writeHead(404, {'Content-Type': 'application/json'});
+                res.end(JSON.stringify({error: "Car not found" }));
+            }
+    } else {
+        res.writeHead(404, { 'Content-Type': 'text/plain' });
+        res.end('Not Found');
     }
-};
-
-app.get('/', (req, res) => {
-    const cars = getCarsData();
-    res.json({
-        success: true,
-        count: cars.length,
-        data: cars
-    });
-    });
-
-
-    app.get('/cars/car', (req, res) => {
-    const { id } = req.query;
-    
-    if (!id) {
-        return res.status(400).json({
-        success: false,
-        error: 'გთხოვთ მიუთითოთ მანქანის ID'
-        });
-    }
-    
-    const cars = getCarsData();
-    const carId = parseInt(id);
-
-    const car = cars.find(c => c.id === carId);
-    
-    if (!car) {
-        return res.status(404).json({
-        success: false,
-        error: `მანქანა ID ${id}-ით ვერ მოიძებნა`
-        });
-    }
-    
-    res.json({
-        success: true,
-        data: car
-    });
-    });
-
-    app.use((req, res) => {
-    res.status(404).json({
-        success: false,
-        error: 'გვერდი ვერ მოიძებნა'
-    });
 });
 
-app.listen(PORT, () => {
-    console.log(`სერვერი გაშვებულია http://localhost:${PORT}`);
-    console.log(`მთავარი გვერდი: http://localhost:${PORT}/`);
-    console.log(`მაგალითი: http://localhost:${PORT}/cars/car?id=1`);
-});
+server.listen(3000, () => 
+    console.log("Server on http://localhost:3000")
+);

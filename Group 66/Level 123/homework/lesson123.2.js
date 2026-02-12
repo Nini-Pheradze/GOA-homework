@@ -1,107 +1,37 @@
-const express = require('express');
-const fs = require('fs');
-const path = require('path');
+// 3) შექმენით ერთი ბილიკი, /transform?case={upper, lower}&text={text}, თქვენი დავალებაა, რომ query - დან ამოიღოთ text და გადააქციოთ ის case - ში არსებული მნიშვნელობის მიხედვით შესაბამის რეგისტრში მაგალითად text ---> Hello World case=upper ---> HELLO WORLD 
 
-const app = express();
-const PORT = 3000;
+const http = require('http');
+const url = require('url');
 
+const server = http.createServer((req, res) => {
+    const parsedURl = url.parse(req.url, true);
+    const path = parsedURl.pathname;
+    const query = parsedURl.query;
 
-const getCarsData = () => {
-  try {
-    const data = fs.readFileSync(path.join(__dirname, 'cars.json'), 'utf8');
-    return JSON.parse(data);
-  } catch (error) {
-    console.error('შეცდომა ფაილის წაკითხვისას:', error);
-    return [];
-  }
-};
+    if (path === '/transform' && req.method === 'GET') {
+        const text = query.text;
+        const textCAse = query.case;
 
-app.get('/', (req, res) => {
-  const cars = getCarsData();
-  res.json({
-    success: true,
-    count: cars.length,
-    data: cars
-  });
+        let result = "";
+
+        if (!text) {
+            result = "Error: Please provide text";
+        } else if (textCAse === 'upper') {
+            result = text.toUpperCase();
+        } else if (textCAse === 'lower') {
+            result = text.toLowerCase();
+        } else {
+            result = "Error: Case must be 'upper' or 'lower'";
+        }
+
+        res.writeHead(200, { "Content-Type": "text/plain; charset=utf-8" });
+        res.end(result);
+    } else {
+        res.writeHead(404, { "Content-Type": "text/plain" });
+        res.end("Not Found");
+    }
 });
 
-app.get('/cars/car', (req, res) => {
-  const { id } = req.query;
-  if (!id) {
-    return res.status(400).json({
-      success: false,
-      error: 'გთხოვთ მიუთითოთ მანქანის ID'
-    });
-  }
-  
-  const cars = getCarsData();
-  const carId = parseInt(id);
-  const car = cars.find(c => c.id === carId);
-  
-  if (!car) {
-    return res.status(404).json({
-      success: false,
-      error: `მანქანა ID ${id}-ით ვერ მოიძებნა`
-    });
-  }
-  
-  res.json({
-    success: true,
-    data: car
-  });
-});
-
-app.get('/transform', (req, res) => {
-  const { case: caseType, text } = req.query;
-  
-
-  if (!text) {
-    return res.status(400).json({
-      success: false,
-      error: 'გთხოვთ მიუთითოთ text პარამეტრი'
-    });
-  }
-  
-  if (!caseType) {
-    return res.status(400).json({
-      success: false,
-      error: 'გთხოვთ მიუთითოთ case პარამეტრი (upper ან lower)'
-    });
-  }
-  
-  let transformedText;
-
-  if (caseType === 'upper') {
-    transformedText = text.toUpperCase();
-  } else if (caseType === 'lower') {
-    transformedText = text.toLowerCase();
-  } else {
-    return res.status(400).json({
-      success: false,
-      error: 'case პარამეტრი უნდა იყოს "upper" ან "lower"'
-    });
-  }
-  
-  res.json({
-    success: true,
-    original: text,
-    case: caseType,
-    transformed: transformedText
-  });
-});
-
-
-app.use((req, res) => {
-  res.status(404).json({
-    success: false,
-    error: 'გვერდი ვერ მოიძებნა'
-  });
-});
-
-
-app.listen(PORT, () => {
-  console.log(`სერვერი გაშვებულია http://localhost:${PORT}`);
-  console.log(`მთავარი გვერდი: http://localhost:${PORT}/`);
-  console.log(`მაგალითი: http://localhost:${PORT}/cars/car?id=1`);
-  console.log(`ტრანსფორმაცია: http://localhost:${PORT}/transform?case=upper&text=Hello World`);
+server.listen(3000, () => {
+    console.log("Server is running on http://localhost:3000");
 });
