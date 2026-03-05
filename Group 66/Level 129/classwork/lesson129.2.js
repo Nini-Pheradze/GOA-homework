@@ -19,22 +19,12 @@
 //     res.status(200).json({ message: 'Login successful!' });
 // }
 
-
-
-
-// შექმენიტ სერვერი სადაც გექნებათ 5 განსხვავებული Route, თითოეული უნდა აბრუნებდეს სხვადასხვა ინფოს. ახსენით რა არის Route და Routing კომენტარებით
-
-
-
-
-
 // შექმენით GET ტიპის Route /products, რომელსაც მოთხოგვნის გაგზავნისას თან უწერთ querys. example: GET /products?id=2
 // თვენი დავალებაა მოიძიოთ ინფროიმაცია როგორ უნდა წაიკითხოთ query express ში, შემდეგ შესაბამისი ID მოიძიეთ პროდუქტი მასივში, თუ იპოვეთ დაუბრუნეთ ეგ პროდუქტი სტატუსის კოდით 200  json ფორმატში, სხვა შემტხვევაში 404 {message: "Product cant be found"}
 
 
 const express = require("express");
 const app = express();
-
 
 const products = [
     { id: 1, name: "Laptop", price: 4500 },
@@ -55,8 +45,6 @@ app.get('/products', (req, res) => {
 
         res.status(200).json(product);
 });
-
-
 
 
 app.listen(3000, () => {

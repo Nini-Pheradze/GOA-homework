@@ -1,61 +1,52 @@
 // 2) შექმენით ბილიკი '/cart', მოუსმინეთ მოთხოვნებს post, get, delete, უნდა შეგეძლოთ cart - შ ახალი item - ის ჩამატება წაშლა და ელემენტების წამოღება (მთლიანად და id - ის მიხედვით)
 
-const express = require("express");
+const express = require('express');
 const app = express();
 
 app.use(express.json());
 
-const PORT = 3000;
-
-// დროებითი cart (მასივი)
 let cart = [
-    { id: 1, name: "Apple", price: 2 },
-    { id: 2, name: "Banana", price: 1 }
+    { id: 1, name: "Laptop", price: 1200 },
+    { id: 2, name: "Mouse", price: 25 }
 ];
 
+app.get('/cart', (req, res) => {
+    res.json(cart);
+});
 
 app.get('/cart/:id', (req, res) => {
-    const { id } = req.params;
-    const item = cart.find((el) => el.id ===  Number(id));
+    const itemId = parseInt(req.params.id);
+    const item = cart.find(i => i.id === itemId);
 
-
-    if (!item) {
-        return res.status(404).json({message: "Item not found"});
-    }
-
+    if (!item) return res.status(404).send('ნივთი ვერ მოიძებნა');
     res.json(item);
 });
 
-app.post("/cart", (req, res) => {
-    const { name, price } = req.body;
-
-    if (!name || !price) {
-        return res.status(400).json({ message: "Name and price are required" });
-    }
-
+app.post('/cart', (req, res) => {
     const newItem = {
-        id: Date.now(),
-        name,
-        price
+        id: cart.length > 0 ? cart[cart.length - 1].id + 1 : 1, 
+        name: req.body.name,
+        price: req.body.price
     };
 
     cart.push(newItem);
     res.status(201).json(newItem);
 });
 
-
-app.delete("/cart/:id", (req, res) => {
-    const id = Number(req.params.id);
-    const index = cart.findIndex(el => el.id === id);
-
-    if (index === -1) {
-        return res.status(404).json({ message: "Item not found" });
+app.delete('/cart/:id', (req, res) => {
+    const itemId = parseInt(req.params.id);
+    const initialLength = cart.length;
+    
+    cart = cart.filter(item => item.id !== itemId);
+    
+    if (cart.length === initialLength) {
+        return res.status(404).send('ნივთი წასაშლელად ვერ მოიძებნა');
     }
-
-    const deletedItem = cart.splice(index, 1);
-    res.json(deletedItem[0]);
+    
+    res.send(`ნივთი ID-ით ${itemId} წარმატებით წაიშალა`);
 });
 
-app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
+app.listen(3000, () => {
+    console.log(`Server running at http://localhost:3000`);
 });
+

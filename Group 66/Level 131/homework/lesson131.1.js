@@ -53,6 +53,6 @@ app.post('/orders', (req, res) => {
     res.status(200).json(deletedOrder[0]);
     });
 
-    app.listen(3000, () => {
+app.listen(3000, () => {
     console.log('Server running on http://localhost:3000');
 });
