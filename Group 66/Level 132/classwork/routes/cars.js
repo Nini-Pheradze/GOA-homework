@@ -3,50 +3,45 @@
 const express = require('express');
 const router = express.Router();
 
-let users = [
-    { id: 1, name: 'Giorgi', role: 'admin' },
-    { id: 2, name: 'Nino', role: 'user' },
-    { id: 3, name: 'Luka', role: 'user' }
+let cars = [
+    { id: 1, brand: 'Mercedes-Benz', model: 'E63 AMG' },
+    { id: 2, brand: 'BMW', model: 'M5 CS' },
+    { id: 3, brand: 'Porsche', model: '911 Turbo S' }
 ];
 
-
 router.get('/', (req, res) => {
-    res.json(users);
+    res.json(cars);
 });
-
 
 router.get('/:id', (req, res) => {
-    const user = users.find(u => u.id === Number(req.params.id));
-    res.json(user || { message: 'User not found' });
+    const carId = cars.find(c => c.id === parseInt(req.params.id));
+    if (!cars) return res.status(404).send("Car can not be found!");
+    res.json(cars); 
 });
 
-
 router.post('/', (req, res) => {
-    const { name, role } = req.query;
-
-    const newUser = {
-        id: Date.now(),
-        name,
-        role
+    const newCar = {
+        id: cars.length + 1,
+        brand: req.body.brand,
+        model: req.body.model
     };
-
-    users.push(newUser);
-    res.json(newUser);
+    cars.push(newCar);
+    res.status(201).json(newCar);
 });
 
 router.patch('/:id', (req, res) => {
-    const user = users.find(u => u.id === Number(req.params.id));
-    if (!user) return res.json({ message: 'User not found' });
+    const carId = cars.find(c => c.id === parseInt(req.params.id));
+    if (!cars) return res.status(405).send("Object can not be found!");
 
-    user.name = req.query.name || user.name;
-    user.role = req.query.role || user.role;
-
-    res.json(user);
+    if (req.body.brand) car.brand = req.body.brand;
+    if (req.body.model) car.model = req.body.model;
+    
+    res.json(cars);
 });
 
 router.delete('/:id', (req, res) => {
-    users = users.filter(u => u.id !== Number(req.params.id));
-    res.json({ message: 'User deleted' });
+    cars = cars.filter(c => c.id !== parseInt(req.params.id));
+    res.send({ message: 'Car deleted successfully!' });
 });
 
 module.exports = router;

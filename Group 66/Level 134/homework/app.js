@@ -1,30 +1,13 @@
-const express = require("express");
-const morgan = require("morgan");
-const studentsRoutes = require("./routes/students.routes");
+// 2) შექმენით პროექტი CRUD (Create, Read, Update, Delete) operations - ებით, students, თქვენ უნდა შეგეძლოთ ახალი student - ების დამატება, წამოღება, მათი grade, role კუთვნილებების განახლება, და student - ის წაშლა, უნდა შეგეძლოთ მოცემული სტუდენტების grade - ით გაფილტვრა, მაგალითად user types /students?grade=30, გამოგაქვთ ისეთი მოსწავლეების ობიექტები რომლის grade - იც უდრის query - ში ჩაწერილ grade - ს, მოცემული კოდები გადაანაწილეთ შესაბამის folder, file - ებში, და ახსენით თითოეული დეტალი კომენტარების სახით
 
+const express = require('express');
 const app = express();
+const studentsRouter = require('./routes/students.router');
 
-/*
-    express.json() არის built-in middleware
-    მისი დანიშნულებაა JSON ფორმატში მოსული მონაცემების წაკითხვა
-    POST / PUT / PATCH მოთხოვნების დროს
-    მის გარეშე req.body იქნება undefined
-*/
-app.use(express.json());
-
-/*
-    morgan არის third-party middleware
-    ის ლოგავს ყველა შემოსულ HTTP request-ს ტერმინალში
-    (method, url, status code, response time)
-    გამოიყენება დებაგინგისა და მონიტორინგისთვის
-*/
-app.use(morgan("dev"));
-
-// Students routes
-app.use("/students", studentsRoutes);
+app.use('/students', studentsRouter);
 
 app.listen(3000, () => {
-    console.log("Server running on port 3000");
+    console.log("http://localhost:3000")
 });
 
 
