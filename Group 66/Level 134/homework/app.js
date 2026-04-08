@@ -2,7 +2,7 @@
 
 const express = require('express');
 const app = express();
-const studentsRouter = require('./routes/students.router');
+const studentsRouter = require('./routes/studentRoutes');
 
 app.use('/students', studentsRouter);
 

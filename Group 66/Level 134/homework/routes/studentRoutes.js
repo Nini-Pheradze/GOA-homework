@@ -48,3 +48,5 @@ router.put('/:id', (req, res) => {
         res.status(404).json({message: "Student has not been found!"});
     }
 });
+
+module.exports = router;
