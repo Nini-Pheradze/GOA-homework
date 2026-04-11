@@ -1,31 +1,68 @@
-// controllers/productController.js
+// Routes (მარშრუტები)
+// მარშრუტიზაცია არის პროცესი, რომლის დროსაც აპლიკაცია განსაზღვრავს, როგორ უპასუხოს კლიენტის მოთხოვნას კონკრეტულ მისამართზე (Endpoint). თითოეული მარშრუტი შედგება HTTP მეთოდისგან (GET, POST, PUT, DELETE) და Path-ისგან (მისამართი).
 
-const fs = require('fs').promises;
-const path = require('path');
-const filePath = path.join(__dirname, '../data/products.json');
+// JavaScript
+// app.get('/users', (req, res) => {
+//     res.send('ყველა მომხმარებლის სია');
+// });
 
-const readData = async () => {
-    const data = await fs.readFile(filePath, 'utf8');
-    return JSON.parse(data);
-};
 
-exports.getProductById = async (req, res, next) => {
-    try {
-        const products = await readData();
-        const product = products.find(p => p.id === parseInt(req.params.id));
+// Middleware Functions (შუამავალი ფუნქციები)
+// ეს არის ფუნქციები, რომლებსაც წვდომა აქვთ მოთხოვნის ობიექტზე (req), პასუხის ობიექტზე (res) და ციკლის შემდეგ ფუნქციაზე (next).
 
-        if (!product) {
-            return next({
-                statusCode: 404,
-                message: "პროდუქტი ამ ID-ით ვერ მოიძებნა"
-            });
-        }
+// რას აკეთებენ: ცვლიან req/res ობიექტებს, ასრულებენ კოდს, ან წყვეტენ მოთხოვნის ციკლს.
 
-        res.json(product);
-    } catch (err) {
-        next({
-            statusCode: 500,
-            message: "მონაცემების წაკითხვა ვერ მოხერხდა"
-        });
-    }
-};
+// ტიპები:
+
+// Application-level: app.use()
+
+// Router-level: router.use()
+
+// Built-in: მაგალითად express.json() (JSON-ის დასამუშავებლად).
+
+
+// Routers (როუტერები)
+// როდესაც აპლიკაცია იზრდება, ყველა მარშრუტის app.js-ში შენახვა მოხერხებული არაა. express.Router გვაძლევს საშუალებას დავაჯგუფოთ ლოგიკურად დაკავშირებული მარშრუტები ცალკე ფაილებში.
+
+// მაგალითად: userRouter.js პასუხისმგებელი იქნება მხოლოდ /users, /users/:id და მსგავს მისამართებზე.
+
+
+// Controllers (კონტროლერები)
+// ეს არის MVC (Model-View-Controller) პატერნის ნაწილი. კონტროლერი არის ადგილი, სადაც რეალური "ბიზნეს ლოგიკა" იმალება.
+
+// რატომ ვიყენებთ? რათა როუტერის ფაილი იყოს სუფთა და მხოლოდ მისამართების გადამისამართებაზე იყოს ორიენტირებული.
+
+// ლოგიკური ჯაჭვი:
+// მოთხოვნა შემოდის → გადის Middleware-ებს → Router პოულობს შესაბამის მისამართს → იძახებს Controller-ის ფუნქციას → Controller აბრუნებს პასუხს.
+
+
+// Express.js-ში Utils (Utilities) საქაღალდე გამოიყენება ისეთი დამხმარე ფუნქციების შესანახად, რომლებიც ხშირად მეორდება პროექტის სხვადასხვა ნაწილში. მათი მიზანია კოდის "გასუფთავება" და DRY (Don't Repeat Yourself) პრინციპის დაცვა.
+
+// აი, ძირითადი შემთხვევები, როდესაც utils ფუნქციები კრიტიკულად მნიშვნელოვანია:
+
+// 1. AppError Class (შეცდომების მართვა)
+// ნაცვლად იმისა, რომ ყოველჯერზე ხელით ვწეროთ შეცდომის სტატუსი, ვქმნით ერთიან კლასს, რომელიც აფართოებს სტანდარტულ Error-ს.
+
+
+// 2. CatchAsync (ასინქრონული ფუნქციების შეფუთვა)
+// Express-ში async/await-თან მუშაობისას, ყოველ კონტროლერში try-catch ბლოკის წერა კოდს ტვირთავს. catchAsync არის "wrapper", რომელიც ავტომატურად აგზავნის შეცდომას Global Error Handler-ში.
+
+
+// 3. APIFeatures (ფილტრაცია, სორტირება, პაგინაცია)
+// თუ ბევრგან გჭირდება მონაცემთა ბაზიდან წამოსული ინფორმაციის დაფილტვრა ან გვერდებად დაყოფა, აჯობებს ეს ლოგიკა ერთ კლასში მოაქციო.
+
+// Filtering: ?price[gte]=500
+
+// Sorting: ?sort=price,-createdAt
+
+// Pagination: ?page=2&limit=10
+
+
+// 4. Email და დამხმარე ფუნქციები
+// ასევე utils-ში ინახება:
+
+// Email.js: პაროლის აღდგენის ან მისალმების იმეილების გაგზავნის ლოგიკა.
+
+// Validators: მონაცემების ვალიდაციის დამხმარე ფუნქციები (მაგ. თარიღის ფორმატირება).
+
+// Token handling: JWT ტოკენების გენერირების ფუნქციები.
