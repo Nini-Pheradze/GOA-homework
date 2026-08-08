@@ -1,0 +1,17 @@
+[
+    {
+        "id": "1",
+        "title": "პირველი პოსტი Next.js-ში",
+        "content": "ეს არის პირველი ბლოგ პოსტის შინაარსი App Router-ის გამოყენებით."
+    },
+    {
+        "id": "2",
+        "title": "React Hooks-ის მიმოხილვა",
+        "content": "დეტალური ინფორმაცია useState, useEffect და useRouter ჰუკების შესახებ."
+    },
+    {
+        "id": "3",
+        "title": "სტაილინგი Next.js-ში",
+        "content": "როგორ გამოვიყენოთ Tailwind CSS ან CSS Modules Next.js პროექტში."
+    }
+]
